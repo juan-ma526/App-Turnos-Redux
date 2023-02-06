@@ -34,29 +34,7 @@ app.use(
     ],
   })
 );
-/*{
-  origin: "http://localhost:3001",
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  optionsSuccessStatus: 200,
-  allowedHeaders: [
-    "Access-Control-Allow-Credentials",
-    "Access-Control-Allow-Headers",
-    "Access-Control-Allow-Origin",
-    "Access-Control-Allow-Cross-Origin",
-    "Access-Control-Allow-Methods",
-    "Origin",
-    "WithCredentials",
-    "X-Requested-Wwith",
-    "Content-Type",
-    "Accept",
-    "Authorization",
-    "X-HTTP-Method-Override",
-    "Set-Cookie",
-    "Cookie",
-    "Request",
-  ],
-}*/
+
 app.use(express.json());
 app.use("/api", router);
 app.get("/allUsers", allUsers);

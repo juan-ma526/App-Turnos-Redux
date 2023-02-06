@@ -22,6 +22,7 @@ const UserSchema = new mongoose.Schema({
     },
     phone: {
         type: String,
+        default: "No phone."
     },
     role: {
         type: String,
