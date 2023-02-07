@@ -4,6 +4,7 @@
 @import "./general.scss";
 
 /*Components*/
+
 @import "./components/pwdRequisites";
 @import "./components/register";
 @import "./components/login";
@@ -16,3 +17,6 @@
 @import "./components/profileOperator";
 @import "./components/navbar";
 @import "./components/advertising";
+@import "./components/finalPanelShift";
+@import "./components/branchListAdmin";
+@import "./components/operatorListAdmin";
