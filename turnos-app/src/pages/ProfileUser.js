@@ -1,7 +1,10 @@
+import NavBar from "../components/NavBar";
+
 const ProfileUser = () => {
   return (
     <div>
       <div className="perfil-clientefinal-perfil-clientefinal">
+        <NavBar />
         <div className="perfil-clientefinal-formulario">
           <span className="perfil-clientefinal-text SemiBold·20·24">
             <span>Mis datos</span>

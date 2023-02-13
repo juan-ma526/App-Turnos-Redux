@@ -1,9 +1,10 @@
 import Dropdown from "../components/Dropdown";
-
+import NavBar from "../components/NavBar";
 const ShiftUser = () => {
   return (
     <div>
       <div className="clientefinal-reservadelcliente-clientefinal-reservadelcliente">
+        <NavBar />
         <div className="clientefinal-reservadelcliente-reservas">
           <div className="clientefinal-reservadelcliente-pedido-mi-cuenta">
             <div className="clientefinal-reservadelcliente-info">

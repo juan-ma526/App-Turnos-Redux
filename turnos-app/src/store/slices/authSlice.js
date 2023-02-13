@@ -5,7 +5,7 @@ const authSlice = createSlice({
   name: "auth",
   initialState: {
     token: "",
-    user: [],
+    user: null,
     isLogin: "false",
     loged: "false",
     error: null,
@@ -27,7 +27,6 @@ const authSlice = createSlice({
       state.isLogin = true;
     });
     builder.addCase(loginUser.fulfilled, (state, action) => {
-      console.log(action);
       state.isLogin = false;
       state.loged = true;
       state.token = action.payload.token;

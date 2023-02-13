@@ -1,4 +1,27 @@
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { logout } from "../store/slices/authSlice";
+
 const NavBar = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [rol, setRole] = useState("");
+  const { user } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    const role = user?.role;
+
+    if (role) {
+      setRole(role);
+    }
+  }, [user]);
+
+  const handleLogout = async (e) => {
+    dispatch(logout());
+    navigate("/register");
+  };
+
   const renderedUser = (
     <div className="header-header">
       <div className="header-c-t-a-desktop2">
@@ -9,7 +32,9 @@ const NavBar = () => {
       <div className="header-men">
         <div className="header-c-t-a-desktop3">
           <span className="header-text2">
-            <span>Mis reservas</span>
+            <Link to="/shiftUser">
+              <span>Mis reservas</span>
+            </Link>
           </span>
           <svg
             className="header-user-interface"
@@ -27,7 +52,9 @@ const NavBar = () => {
         </div>
         <div className="header-c-t-a-desktop31 my-account">
           <span className="header-text4">
-            <span>Mi Cuenta</span>
+            <Link to="/profileUser">
+              <span>Mi Cuenta</span>
+            </Link>
           </span>
           <svg
             className="header-user-interface1"
@@ -44,7 +71,7 @@ const NavBar = () => {
           </svg>
           <div className="navbar_menu">
             <div>
-              <button>Cerrar Sesión</button>
+              <button onClick={handleLogout}>Cerrar Sesión</button>
             </div>
           </div>
         </div>
@@ -92,7 +119,7 @@ const NavBar = () => {
           </svg>
           <div className="navbar_menu">
             <div>
-              <button>Cerrar Sesión</button>
+              <button onClick={handleLogout}>Cerrar Sesión</button>
             </div>
           </div>
         </div>
@@ -185,7 +212,7 @@ const NavBar = () => {
           </svg>
           <div className="navbar_menu">
             <div>
-              <button>Cerrar Sesión</button>
+              <button onClick={handleLogout}>Cerrar Sesión</button>
             </div>
           </div>
         </div>
@@ -193,7 +220,13 @@ const NavBar = () => {
     </div>
   );
 
-  return <div>{renderedAdmin}</div>;
+  return rol === "client"
+    ? renderedUser
+    : rol === "administrator"
+    ? renderedAdmin
+    : rol === "operator"
+    ? renderedOperator
+    : "";
 };
 
 export default NavBar;
