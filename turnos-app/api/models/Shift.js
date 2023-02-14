@@ -1,20 +1,17 @@
 const mongoose = require('mongoose')
 
 const ShiftSchema = new mongoose.Schema({
-    idShift: {
-        type: Number
-    },
     idBranch: {
-        type: Number
+        type: String
     },
     idUser: {
-        type: Number
+        type: String
     },
     dateBooking: {
         type: Date
     },
     dateShift: {
-        type: Date
+        type: String
     },
     statusHour: {
         type: String

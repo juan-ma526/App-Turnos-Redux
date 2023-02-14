@@ -10,7 +10,9 @@ const branchManagement = {
                 name: req.body.name,
                 capMax: req.body.capMax,
                 email: req.body.email,
-                timetable: "19:00 - 23:00"
+                beginTime: req.body.beginTime,
+                closeTime: req.body.closeTime,
+                phone: req.body.phone
             })
             branch.save()
 

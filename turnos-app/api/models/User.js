@@ -10,6 +10,7 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
+        minlength: [8, "Minimun password length is 8 characters"],
     },
     salt: {
         type: String,
@@ -22,7 +23,7 @@ const UserSchema = new mongoose.Schema({
     },
     phone: {
         type: String,
-        default: "No phone."
+        default: null
     },
     role: {
         type: String,
