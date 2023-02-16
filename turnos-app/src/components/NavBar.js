@@ -32,7 +32,7 @@ const NavBar = () => {
       <div className="header-men">
         <div className="header-c-t-a-desktop3">
           <span className="header-text2">
-            <Link to="/shiftUser">
+            <Link className="link" to="/shiftUser">
               <span>Mis reservas</span>
             </Link>
           </span>
@@ -52,7 +52,7 @@ const NavBar = () => {
         </div>
         <div className="header-c-t-a-desktop31 my-account">
           <span className="header-text4">
-            <Link to="/profileUser">
+            <Link className="link" to="/profileUser">
               <span>Mi Cuenta</span>
             </Link>
           </span>
@@ -130,18 +130,25 @@ const NavBar = () => {
     <div className="header-header">
       <div className="header-c-t-a-desktop2">
         <span className="header-text">
-          <span>Crear sucursal</span>
+          <Link className="link" to="/createBranch">
+            {" "}
+            <span>Crear sucursal</span>
+          </Link>
         </span>
       </div>
       <div className="header-c-t-a-desktop21">
         <span className="header-text02">
-          <span>Crear Operador</span>
+          <Link className="link" to="/createOperator">
+            <span>Crear Operador</span>
+          </Link>
         </span>
       </div>
       <div className="header-men">
         <div className="header-c-t-a-desktop3">
           <span className="header-text04">
-            <span>Sucursales</span>
+            <Link className="link" to="/branchList">
+              <span>Sucursales</span>
+            </Link>
           </span>
           <svg
             className="header-location"
@@ -159,7 +166,9 @@ const NavBar = () => {
         </div>
         <div className="header-c-t-a-desktop31">
           <span className="header-text06">
-            <span>Operadores</span>
+            <Link className="link" to="/operatorList">
+              <span>Operadores</span>
+            </Link>
           </span>
           <svg
             className="header-communication"
@@ -195,7 +204,9 @@ const NavBar = () => {
         </div>
         <div className="header-c-t-a-desktop33 my-account">
           <span className="header-text10">
-            <span>Mi Cuenta</span>
+            <Link className="link" to="/profileAdmin">
+              <span>Mi Cuenta</span>
+            </Link>
           </span>
           <svg
             className="header-user-interface"

@@ -24,7 +24,7 @@ const Login = () => {
         allowOutsideClick: false,
         timer: 1000,
       });
-      navigate("/panelShift");
+      navigate("/branchList");
     }
   }, [user]);
 
