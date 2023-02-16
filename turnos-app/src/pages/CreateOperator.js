@@ -1,7 +1,10 @@
+import NavBar from "../components/NavBar";
+
 const CreateOperator = () => {
   return (
     <div>
       <div className="administrador-creacindeoperadores-administrador-creacindeoperadores">
+        <NavBar />
         <form>
           <div className="administrador-creacindeoperadores-formulario">
             <span className="administrador-creacindeoperadores-text SemiBold·20·24">

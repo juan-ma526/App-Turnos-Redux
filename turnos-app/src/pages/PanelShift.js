@@ -15,8 +15,8 @@ const PanelShift = () => {
 
   return (
     <div>
-      <NavBar user={user} />
-      PanelShift
+      <NavBar />
+      {user}
     </div>
   );
 };

@@ -1,7 +1,10 @@
+import NavBar from "../components/NavBar";
+
 const ProfileAdmin = () => {
   return (
     <div>
       <div className="perfil-administrador-perfil-administrador">
+        <NavBar />
         <div className="perfil-administrador-formulario">
           <span className="perfil-administrador-text SemiBold·20·24">
             <span>Mis datos</span>

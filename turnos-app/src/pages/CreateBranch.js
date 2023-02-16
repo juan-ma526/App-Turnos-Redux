@@ -1,7 +1,10 @@
+import NavBar from "../components/NavBar";
+
 const CreateBranch = () => {
   return (
     <div>
       <div className="administrador-creacindesucursales-administrador-creacindesucursales">
+        <NavBar />
         <form>
           <div className="administrador-creacindesucursales-formulario">
             <span className="administrador-creacindesucursales-text SemiBold·20·24">

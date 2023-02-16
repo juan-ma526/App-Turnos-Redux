@@ -1,7 +1,10 @@
+import NavBar from "../components/NavBar";
+
 const OperatorListAdmin = () => {
   return (
     <div>
       <div className="administrador-listadodeoperadores-administrador-listadodeoperadores">
+        <NavBar />
         <span className="administrador-listadodeoperadores-text SemiBold·20·24">
           <span>Operadores</span>
         </span>
