@@ -1,31 +1,55 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../store";
-import { addUser } from "../store/slices/authSlice";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const { user } = useSelector((state) => {
     return state.auth;
   });
+
+  useEffect(() => {
+    const role = user?.role;
+    if (role) {
+      Swal.fire({
+        title: "Exito",
+        text: "Iniciaste Sesion",
+        icon: "success",
+        allowOutsideClick: false,
+        timer: 1000,
+      });
+      navigate("/branchList");
+    }
+  }, [user]);
+
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
+
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(loginUser({ email, password }));
+    if (user === undefined || user === null) {
+      Swal.fire({
+        title: "Error",
+        text: "Error de email o contraseña",
+        icon: "error",
+        allowOutsideClick: false,
+        timer: 1000,
+      });
+    }
   };
-  useEffect(() => {
-    dispatch(addUser());
-  }, [dispatch]);
-  console.log(user);
+
   return (
     <div>
       <div className="clientefinal-login-clientefinal-login">

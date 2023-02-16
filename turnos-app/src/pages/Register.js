@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PwdRequisites from "../components/PwdRequisites";
 import { registerUser } from "../store";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -20,7 +22,7 @@ const Register = () => {
     empty: true,
   });
 
-  const { isCreating, created, error } = useSelector((state) => {
+  const { created } = useSelector((state) => {
     return state.users;
   });
 
@@ -97,8 +99,22 @@ const Register = () => {
       password === repeatPassword
     ) {
       dispatch(registerUser({ fullName, email, password, dni }));
+      Swal.fire({
+        title: "Exito",
+        text: "Registro Exitoso",
+        icon: "success",
+        allowOutsideClick: false,
+        timer: 1000,
+      });
+      navigate("/");
     } else {
-      console.log("Complete el password con las caracteristicas necesarias");
+      Swal.fire({
+        title: "Error",
+        text: "Complete los datos con las caracteristicas requeridas",
+        icon: "error",
+        allowOutsideClick: false,
+        timer: 1000,
+      });
     }
   };
 

@@ -117,7 +117,7 @@
   /* Inside auto layout */
 
   flex: none;
-  order: 2;
+  order: 1;
   flex-grow: 0;
 }
 .header-text2 {
@@ -223,39 +223,6 @@
   flex: none;
   order: 2;
   flex-grow: 0;
-}
-.my-account {
-  .navbar_menu {
-    opacity: 0;
-  }
-}
-
-.my-account:hover {
-  .navbar_menu {
-    opacity: 1;
-  }
-}
-.navbar_menu {
-  height: 100%;
-  position: absolute;
-  margin-top: 22vh;
-  margin-right: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  button {
-    width: 100px;
-    height: 40px;
-    border: none;
-    background-color: $white;
-    color: $black;
-    border: $black solid 1px;
-  }
-
-  button:hover {
-    color: $black;
-  }
 }
 
 /* navbar admin*/
@@ -546,4 +513,38 @@
   flex: none;
   order: 2;
   flex-grow: 0;
+}
+.my-account {
+  .navbar_menu {
+    opacity: 0;
+  }
+}
+
+.my-account:hover {
+  .navbar_menu {
+    opacity: 1;
+  }
+}
+.navbar_menu {
+  height: 100%;
+  position: absolute;
+  margin-top: 10vh;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 65px;
+
+  button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: $white;
+    color: $black;
+    border: $black solid 1px;
+  }
+
+  button:hover {
+    color: $black;
+  }
 }
