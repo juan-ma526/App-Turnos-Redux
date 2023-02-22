@@ -16,7 +16,7 @@ const {
   deleteBranch,
 } = require("../controllers/branch");
 
-router.post("/createBranch", validateAuth, validateAdmin, createBranch);
+router.post("/createBranch", createBranch); //router.post("/createBranch", validateAuth, validateAdmin, createBranch);
 router.get("/allBranchs", allBranchs); //router.get("/allBranchs", validateAuth, validateAdmin, allBranchs)
 router.get("/branchById/:id", validateAuth, validateAdmin, branchById);
 router.get("/operators/:id", validateAuth, validateAdmin, allOperatorsInBranch);

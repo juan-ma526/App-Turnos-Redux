@@ -13,20 +13,23 @@ const usersManagement = {
       if (usuario) {
         return res.status(400).send("Email already exists");
       }
-      if(req.body.password.charAt(0) === req.body.password.charAt(0).toLowerCase()){
-        return res.status(400).send("First letter have to upper case.")
+      if (
+        req.body.password.charAt(0) ===
+        req.body.password.charAt(0).toLowerCase()
+      ) {
+        return res.status(400).send("First letter have to upper case.");
       }
-      
+
       function containsNumber(str) {
         return /\d/.test(str);
       }
 
-      if(!containsNumber(req.body.password)){
-        return res.status(400).send("The password need 1 number.")
+      if (!containsNumber(req.body.password)) {
+        return res.status(400).send("The password need 1 number.");
       }
-      let dniUsed = await User.findOne({dni: req.body.dni });
-      if(dniUsed){
-        return res.status(400).send("DNI have been used.")
+      let dniUsed = await User.findOne({ dni: req.body.dni });
+      if (dniUsed) {
+        return res.status(400).send("DNI have been used.");
       }
 
       const user = req.body;
@@ -41,7 +44,7 @@ const usersManagement = {
         res.status(201).send(savedUser);
       });
     } catch (err) {
-      return res.status(400).send(err)
+      return res.status(400).send(err);
     }
   },
 
@@ -191,17 +194,27 @@ const usersManagement = {
   },
   //Un administrador crea el perfil de un operador.
   createOperator: async function (req, res) {
-    const user = await User.findOne({ id: req.user.id });
+    try {
+      const user = await User.findOne({ id: req.body.id });
 
-    if (user.role === "administrator") {
-      const newOperator = req.body;
-      const newOp = new User({
-        fullName: req.body.fullname,
-        password: req.body.password,
-        dni: req.body.dni,
-        role: "operator",
-        idBranch: req.body.idBranch,
-      });
+      if (user.role === "administrator") {
+        const newOperator = req.body;
+        const newOp = new User({
+          fullName: req.body.fullName,
+          password: req.body.password,
+          dni: req.body.dni,
+          role: "operator",
+          idBranch: req.body.idBranch,
+          nameBranch: req.body.nameBranch,
+          email: req.body.email,
+        });
+
+        newOp.save().then((savedUser) => {
+          res.status(201).send(savedUser);
+        });
+      }
+    } catch (error) {
+      return res.status(400).send(error);
     }
   },
   //Función para recuperar contraseña olvidada
@@ -236,22 +249,43 @@ const usersManagement = {
   //Actualizar perfil de un usuario
   updateLogedUser: async function (req, res) {
     try {
-      let newHash = bcrypt.hashSync(req.body.password, 10);
+      let data = req.body;
 
-      const user = await User.update(
-        { _id: req.user.id },
-        {
-          email: req.body.email,
-          phone: req.body.phone,
-          password: newHash,
-        }
-      );
-      res.status(200).send(`Updated!`);
+      if (data.password && data.phone) {
+        let newHash = bcrypt.hashSync(req.body.password, 10);
+
+        const upd = await User.update(
+          { _id: data.id },
+          { password: newHash, phone: data.phone }
+        );
+        return res.status(200).send("Password and Phone updated");
+      } else if (data.password) {
+        let newHash = bcrypt.hashSync(req.body.password, 10);
+        const update = await User.update(
+          { _id: data.id },
+          {
+            password: newHash,
+          }
+        );
+        return res.status(200).send("Password updated");
+      } else if (data.phone) {
+        const updated = await User.update(
+          { _id: data.id },
+          {
+            phone: data.phone,
+          }
+        );
+        return res.status(200).send("Phone updated!");
+      } else {
+        return res
+          .status(400)
+          .send("Credentials are invalids or send empty fields.");
+      }
     } catch (error) {
       res.status(404).send("Email ya existente");
     }
   },
-  
+
   //Borrar un usuario
   deleteUser: async function (req, res) {
     const user = await User.deleteOne({ _id: req.params.id })

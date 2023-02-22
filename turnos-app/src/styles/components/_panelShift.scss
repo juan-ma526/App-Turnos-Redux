@@ -1,0 +1,2436 @@
+.clientefinal-paneldereservas-clientefinal-paneldereservas1 {
+  /* Cliente final: Panel de reservas */
+
+  position: relative;
+  width: 100%;
+  height: 944px;
+
+  /* Grey 1 */
+
+  background: #f5f5f5;
+}
+.clientefinal-paneldereservas-text1 {
+  /* Title */
+
+  position: absolute;
+  width: 1176px;
+  height: 24px;
+  left: 96px;
+  top: 160px;
+
+  /* SemiBold · 20 · 24 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+
+  font-feature-settings: "zero" on;
+
+  /* Black */
+
+  color: #000000;
+}
+.clientefinal-paneldereservas-reserva {
+  /* Reserva */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 40px;
+  gap: 32px;
+
+  position: absolute;
+  width: 679px;
+  height: 608px;
+  left: 96px;
+  top: 208px;
+
+  /* White */
+
+  background: #ffffff;
+  border-radius: 8px;
+}
+.clientefinal-paneldereservas-content {
+  /* Content */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+
+  width: 599px;
+  height: 468px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-head {
+  /* Head */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+
+  width: 599px;
+  height: 48px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-text002 {
+  /* Título */
+
+  width: 599px;
+  height: 24px;
+
+  /* Semibold · 18 · 24 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  font-feature-settings: "zero" on;
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-text004 {
+  /* Txt */
+
+  width: 599px;
+  height: 20px;
+
+  /* Regular · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-stepper {
+  /* Stepper */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 599px;
+  height: 60px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  //order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-step {
+  /* Step */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+
+  width: 199.67px;
+  height: 60px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.clientefinal-paneldereservas-step1 {
+  /* Step */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+
+  width: 199.67px;
+  height: 32px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-border {
+  /* Border */
+
+  width: 83.83px;
+  height: 2px;
+
+  /* Éxito */
+
+  background: #00a541;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.clientefinal-paneldereservas-icon {
+  /* Icon */
+
+  width: 32px;
+  height: 32px;
+
+  /* Éxito */
+
+  background: #00a541;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-user-interface {
+  /* User Interface */
+
+  position: absolute;
+  width: 26px;
+  height: 25px;
+  left: 3px;
+  top: 4px;
+}
+.clientefinal-paneldereservas-union {
+  top: 9.126994132995605px;
+  left: 7.8994550704956055px;
+  width: 11px;
+  height: 7px;
+  position: absolute;
+}
+.clientefinal-paneldereservas-border1 {
+  width: auto;
+  height: 2px;
+  position: relative;
+  flex-grow: 1;
+  border-color: transparent;
+}
+.clientefinal-paneldereservas-text006 {
+  color: var(--dl-color-default-xito);
+  height: auto;
+  align-self: stretch;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.clientefinal-paneldereservas-step2 {
+  width: 199.6666717529297px;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+}
+.clientefinal-paneldereservas-step3 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 8px;
+}
+.clientefinal-paneldereservas-border2 {
+  width: auto;
+  height: 2px;
+  position: relative;
+  flex-grow: 1;
+  border-color: transparent;
+  margin-right: 0px;
+}
+.clientefinal-paneldereservas-icon1 {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 8px;
+  background-color: var(--dl-color-default-xito);
+}
+.clientefinal-paneldereservas-user-interface1 {
+  top: 4px;
+  left: 3px;
+  width: 26px;
+  height: 25px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.clientefinal-paneldereservas-union1 {
+  top: 9.126994132995605px;
+  left: 7.8994550704956055px;
+  width: 11px;
+  height: 7px;
+  position: absolute;
+}
+.clientefinal-paneldereservas-border3 {
+  width: auto;
+  height: 2px;
+  position: relative;
+  flex-grow: 1;
+  border-color: transparent;
+}
+.clientefinal-paneldereservas-text008 {
+  color: var(--dl-color-default-xito);
+  height: auto;
+  align-self: stretch;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.clientefinal-paneldereservas-step4 {
+  width: 199.6666717529297px;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  flex-direction: column;
+}
+.clientefinal-paneldereservas-step5 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 8px;
+}
+.clientefinal-paneldereservas-border4 {
+  width: auto;
+  height: 2px;
+  position: relative;
+  flex-grow: 1;
+  border-color: transparent;
+  margin-right: 0px;
+}
+.clientefinal-paneldereservas-icon2 {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 8px;
+  background-color: var(--dl-color-default-xito);
+}
+.clientefinal-paneldereservas-user-interface2 {
+  top: 4px;
+  left: 3px;
+  width: 26px;
+  height: 25px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.clientefinal-paneldereservas-union2 {
+  top: 9.126994132995605px;
+  left: 7.8994550704956055px;
+  width: 11px;
+  height: 7px;
+  position: absolute;
+}
+.clientefinal-paneldereservas-border5 {
+  width: auto;
+  height: 2px;
+  position: relative;
+  flex-grow: 1;
+  border-color: transparent;
+}
+.clientefinal-paneldereservas-text010 {
+  color: var(--dl-color-default-xito);
+  height: auto;
+  align-self: stretch;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.clientefinal-paneldereservas-inputs {
+  /* Inputs */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+
+  width: 599px;
+  height: 312px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-input-desktop2 {
+  /* Input Desktop 2 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 2px;
+
+  width: 599px;
+  height: 66px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-txt {
+  /* Txt */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+
+  width: 599px;
+  height: 20px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-text012 {
+  /* Título */
+
+  width: 599px;
+  height: 20px;
+
+  /* Regular · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  display: flex;
+  align-items: center;
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.clientefinal-paneldereservas-input-desktop1 {
+  /* Input Desktop 1 */
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 8px 12px 12px;
+  gap: 8px;
+
+  width: 599px;
+  height: 44px;
+
+  /* Grey 3 */
+
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  background-color: white;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-text014 {
+  /* Txt */
+
+  width: 551px;
+  height: 20px;
+
+  /* Regular · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  display: flex;
+  align-items: center;
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.clientefinal-paneldereservas-input-desktop3 {
+  /* Input Desktop 3 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 2px;
+
+  width: 599px;
+  height: 66px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-txt1 {
+  /* Txt */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+
+  width: 599px;
+  height: 20px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-text016 {
+  /* Título */
+
+  width: 599px;
+  height: 20px;
+
+  /* Regular · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  display: flex;
+  align-items: center;
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.clientefinal-paneldereservas-input-desktop11 {
+  /* Input Desktop 1 */
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 8px 12px 12px;
+  gap: 8px;
+
+  width: 599px;
+  height: 44px;
+
+  /* Grey 3 */
+
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  background-color: white;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-text018 {
+  /* Txt */
+
+  width: 551px;
+  height: 20px;
+
+  /* Regular · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  display: flex;
+  align-items: center;
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.clientefinal-paneldereservas-fila {
+  /* Fila */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+
+  width: 599px;
+  height: 66px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-input-desktop21 {
+  /* Input Desktop 2 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 2px;
+
+  width: 291.5px;
+  height: 66px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.clientefinal-paneldereservas-txt2 {
+  /* Txt */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+
+  width: 291.5px;
+  height: 20px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-text020 {
+  /* Título */
+
+  width: 291.5px;
+  height: 20px;
+
+  /* Regular · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  display: flex;
+  align-items: center;
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.clientefinal-paneldereservas-input-desktop12 {
+  /* Input Desktop 1 */
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 8px 12px 12px;
+  gap: 8px;
+
+  width: 291.5px;
+  height: 44px;
+
+  /* Grey 3 */
+
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-input-desktop31 {
+  /* Input Desktop 3 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 2px;
+
+  width: 291.5px;
+  height: 66px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+.clientefinal-paneldereservas-txt3 {
+  /* Txt */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+
+  width: 291.5px;
+  height: 20px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-text022 {
+  /* Título */
+
+  width: 291.5px;
+  height: 20px;
+
+  /* Regular · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  display: flex;
+  align-items: center;
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.clientefinal-paneldereservas-input-desktop13 {
+  /* Input Desktop 1 */
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 8px 12px 12px;
+  gap: 8px;
+
+  width: 291.5px;
+  height: 44px;
+
+  /* Grey 3 */
+
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-input-desktop22 {
+  /* Input Desktop 2 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 2px;
+
+  width: 599px;
+  height: 66px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 3;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-txt4 {
+  /* Txt */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+
+  width: 599px;
+  height: 20px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-text024 {
+  /* Título */
+
+  width: 599px;
+  height: 20px;
+
+  /* Regular · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  display: flex;
+  align-items: center;
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.clientefinal-paneldereservas-input-desktop14 {
+  /* Input Desktop 1 */
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 8px 12px 12px;
+  gap: 8px;
+
+  width: 599px;
+  height: 44px;
+
+  /* Grey 3 */
+
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-c-t-a-desktop10 {
+  /* CTA-Desktop-1 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 4px;
+
+  width: 178px;
+  height: 44px;
+
+  /* Principal */
+
+  background: #a442f1;
+  border-radius: 8px;
+  border: none;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-text026 {
+  /* Text */
+
+  width: 130px;
+  height: 20px;
+
+  /* Semibold · 16 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: "zero" on;
+
+  /* White */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.clientefinal-paneldereservas-calendar {
+  /* Calendar */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  gap: 10px;
+
+  position: absolute;
+  width: 457px;
+  height: 362px;
+  left: 815px;
+  top: 208px;
+
+  /* White */
+
+  background: #ffffff;
+  border-radius: 8px;
+}
+.clientefinal-paneldereservas-months {
+  width: 392px;
+  display: flex;
+  padding: 8px 16px;
+  position: relative;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 10px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text028 {
+  color: var(--dl-color-default-black);
+  height: auto;
+  align-self: stretch;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.clientefinal-paneldereservas-days {
+  width: 392px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  flex-direction: column;
+}
+.clientefinal-paneldereservas-days1 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 8px;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-days2 {
+  width: 56px;
+  display: flex;
+  padding: 8px 16px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text030 {
+  color: var(--dl-color-default-grey7);
+  height: auto;
+  font-size: 17px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-days3 {
+  width: 56px;
+  display: flex;
+  padding: 8px 16px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text032 {
+  color: var(--dl-color-default-grey7);
+  height: auto;
+  font-size: 17px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-days4 {
+  width: 56px;
+  display: flex;
+  padding: 8px 16px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text034 {
+  color: var(--dl-color-default-grey7);
+  height: auto;
+  font-size: 17px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-days5 {
+  width: 56px;
+  display: flex;
+  padding: 8px 16px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text036 {
+  color: var(--dl-color-default-grey7);
+  height: auto;
+  font-size: 17px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-days6 {
+  width: 56px;
+  display: flex;
+  padding: 8px 16px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text038 {
+  color: var(--dl-color-default-grey7);
+  height: auto;
+  font-size: 17px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-days7 {
+  width: 56px;
+  display: flex;
+  padding: 8px 16px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text040 {
+  color: var(--dl-color-default-grey7);
+  height: auto;
+  font-size: 17px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-days8 {
+  width: 56px;
+  display: flex;
+  padding: 8px 16px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text042 {
+  color: var(--dl-color-default-grey7);
+  height: auto;
+  font-size: 17px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-weeklys {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  border-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-weekly {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 0px;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-dayselect {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text044 {
+  color: var(--dl-color-default-grey4);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect01 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-default-grey2);
+}
+.clientefinal-paneldereservas-text046 {
+  color: var(--dl-color-default-grey5);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect02 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text047 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect03 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text048 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect04 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text049 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect05 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text050 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect06 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text051 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-weekly1 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 0px;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-dayselect07 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text052 {
+  color: var(--dl-color-default-grey4);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect08 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text053 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect09 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text054 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect10 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-default-grey2);
+}
+.clientefinal-paneldereservas-text055 {
+  color: var(--dl-color-default-grey5);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect11 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text057 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect12 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-default-principal);
+}
+.clientefinal-paneldereservas-text059 {
+  color: var(--dl-color-default-white);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect13 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text061 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-weekly2 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 0px;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-dayselect14 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text063 {
+  color: var(--dl-color-default-grey4);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect15 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text065 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect16 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text067 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect17 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text069 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect18 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text071 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect19 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-default-grey2);
+}
+.clientefinal-paneldereservas-text073 {
+  color: var(--dl-color-default-grey5);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect20 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text075 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-weekly3 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-bottom: 0px;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-dayselect21 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text077 {
+  color: var(--dl-color-default-grey4);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect22 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-default-grey2);
+}
+.clientefinal-paneldereservas-text079 {
+  color: var(--dl-color-default-grey5);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect23 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text081 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect24 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-default-grey2);
+}
+.clientefinal-paneldereservas-text083 {
+  color: var(--dl-color-default-grey5);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect25 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text085 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect26 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text087 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect27 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text089 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-weekly4 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-dayselect28 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text091 {
+  color: var(--dl-color-default-grey4);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect29 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text093 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect30 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text095 {
+  color: var(--dl-color-default-grey9);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect31 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text097 {
+  color: var(--dl-color-default-grey4);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect32 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text098 {
+  color: var(--dl-color-default-grey4);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect33 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text099 {
+  color: var(--dl-color-default-grey4);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-dayselect34 {
+  width: 56px;
+  display: flex;
+  padding: 8px 12px;
+  position: relative;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+}
+.clientefinal-paneldereservas-text100 {
+  color: var(--dl-color-default-grey4);
+  height: auto;
+  font-size: 16px;
+  align-self: auto;
+  font-style: Medium;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.clientefinal-paneldereservas-contador {
+  /* Contador */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+
+  position: absolute;
+  width: 125px;
+  height: 44px;
+  right: 96px;
+  bottom: 40px;
+
+  /* Secundario */
+
+  background: #cc6aff;
+  /* sombra-1 */
+
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: none;
+}
+.clientefinal-paneldereservas-text101 {
+  /* txt */
+
+  width: 101px;
+  height: 20px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: "zero" on;
+
+  /* White */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}

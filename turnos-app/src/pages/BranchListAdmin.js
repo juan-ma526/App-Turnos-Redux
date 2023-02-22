@@ -18,10 +18,10 @@ const BranchListAdmin = () => {
     return <div>Hubo un error en la obtencion de datos</div>;
   }
 
-  const renderedBranch = data.map((branch) => {
+  const renderedBranch = data.map((branch, index) => {
     return (
       <div
-        key={branch._id}
+        key={index}
         className="administrador-listadodesucursales-pedido-mi-cuenta"
       >
         <div className="administrador-listadodesucursales-info">

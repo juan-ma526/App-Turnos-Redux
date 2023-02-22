@@ -3,44 +3,45 @@ const bcrypt = require("bcrypt");
 const validator = require("validator");
 
 const UserSchema = new mongoose.Schema({
-
-    fullName: {
-        type: String,
-        required: true,
-    },
-    password: {
-        type: String,
-        required: true,
-        minlength: [8, "Minimun password length is 8 characters"],
-    },
-    salt: {
-        type: String,
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-        validate: [validator.default.isEmail, "Please enter a valid email"],
-    },
-    phone: {
-        type: String,
-        default: null
-    },
-    role: {
-        type: String,
-        default: "client",
-    },
-    dni: {
-        type: String,
-        unique: true,
-    },
-    idBranch: {
-        type: String,
-        default: null,
-    }
-
-})
-
+  fullName: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+    minlength: [8, "Minimun password length is 8 characters"],
+  },
+  salt: {
+    type: String,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    validate: [validator.default.isEmail, "Please enter a valid email"],
+  },
+  phone: {
+    type: String,
+    default: null,
+  },
+  role: {
+    type: String,
+    default: "client",
+  },
+  dni: {
+    type: String,
+    unique: true,
+  },
+  idBranch: {
+    type: String,
+    default: null,
+  },
+  nameBranch: {
+    type: String,
+    default: null,
+  },
+});
 
 // Schema Hook => has de la password y creacion del salt del usuario
 UserSchema.pre("save", async function () {

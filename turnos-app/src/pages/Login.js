@@ -16,6 +16,7 @@ const Login = () => {
 
   useEffect(() => {
     const role = user?.role;
+
     if (role) {
       Swal.fire({
         title: "Exito",
@@ -24,7 +25,13 @@ const Login = () => {
         allowOutsideClick: false,
         timer: 1000,
       });
-      navigate("/branchList");
+      if (role === "administrator") {
+        navigate("/branchList");
+      } else if (role === "operator") {
+        navigate("/shiftOperatorView");
+      } else {
+        navigate("/panelShift");
+      }
     }
   }, [user]);
 

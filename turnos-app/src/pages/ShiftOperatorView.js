@@ -1,9 +1,11 @@
 import DropdownOperator from "../components/DropdownOperator";
+import NavBar from "../components/NavBar";
 
 const ShiftOperatorView = () => {
   return (
     <div>
       <div className="operador-visualizacindereservas-operador-visualizacindereservas">
+        <NavBar />
         <div className="operador-visualizacindereservas-reservas">
           <div className="operador-visualizacindereservas-pedido-mi-cuenta">
             <div className="operador-visualizacindereservas-info">

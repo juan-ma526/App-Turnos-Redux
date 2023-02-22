@@ -14,5 +14,9 @@ const store = configureStore({
 export { store };
 
 export * from "./thunks/register";
+export * from "./thunks/createOperator";
+export * from "./thunks/getOperator";
+export * from "./thunks/updateAdminClientOperator";
 export * from "./thunks/login";
 export * from "./thunks/getBranch";
+export * from "./thunks/createBranch";
