@@ -119,7 +119,7 @@ const usersManagement = {
     }
   },
 
-  //Función para buscar usuarios. [Nombre, email, phone, dni]
+  //Función para buscar usuarios. [Nombre, email, phone, dni] /=WIP=\
   searchUser: async function (req, res) {
     const user = await User.find();
     let filterUsers = [];
@@ -190,20 +190,56 @@ const usersManagement = {
     }
   },
   //Un administrador crea el perfil de un operador.
-  createOperator: async function (req, res) {
-    const user = await User.findOne({ id: req.user.id });
 
-    if (user.role === "administrator") {
-      const newOperator = req.body;
+  createOperator: async function (req, res) {
+  
+    let newHash = bcrypt.hashSync(req.body.password, 10)
       const newOp = new User({
         fullName: req.body.fullname,
-        password: req.body.password,
+        password: newHash,
+        dni: req.body.dni,
+        role: "operator",
+        idBranch: req.params.idBranch,
+        email: req.body.email
+      });
+  
+      // Guardar el nuevo operador en la base de datos
+      await newOp.save();
+  
+      // Agregar el ID del nuevo operador a la tabla Branch correspondiente
+      await Branch.updateOne(
+        { _id: req.params.idBranch },
+        { $push: { idOperator: newOp._id } }
+      );
+  
+      res.status(201).json({ message: "Operator created successfully" });
+    
+  },
+  
+  createOperator: async function (req, res) {
+    try{
+
+    let newHash = bcrypt.hashSync(req.body.password, 10)
+
+      const newOp = new User({
+        fullName: req.body.fullname,
+        password: newHash,
         dni: req.body.dni,
         role: "operator",
         idBranch: req.body.idBranch,
+        email: req.body.email,
       });
+      await newOp.save()
+      console.log(newOp)
+
+      await Branch.updateOne({ _id: req.body.idBranch }, { $push: { idOperator: newOp._id } });
+
+      res.status(201).send(newOp)
+
     }
+    catch(error){res.status(500).send(error);}
   },
+  
   //Función para recuperar contraseña olvidada
   changePassword: async function (req, res) {
     const userFound = await User.findOne({ email: req.body.email });
@@ -233,13 +269,49 @@ const usersManagement = {
       }
     });
   },
+
   //Actualizar perfil de un usuario
   updateLogedUser: async function (req, res) {
     try {
-      let newHash = bcrypt.hashSync(req.body.password, 10);
+      let data = req.body
 
+      if(data.password && data.phone){
+
+        let newHash = bcrypt.hashSync(req.body.password, 10);
+
+        const upd = await User.update({_id: data.id},
+          {
+          password: newHash,
+           phone: data.phone
+          })
+        return res.status(200).send("Password and Phone updated!")
+      }
+      else if(data.password){
+        let newHash = bcrypt.hashSync(req.body.password, 10);
+
+        const update = await User.update({_id: data.id}, 
+          {
+            password: newHash,
+          })
+
+          return res.status(200).send("Password updated!")
+      }
+      else if(data.phone){
+
+        const updated = await User.update({_id: data.id}, 
+          {
+            phone: data.phone
+          })
+
+          return res.status(200).send("Phone updated!")
+      }
+      else{
+        return res.status(400).send("Credentials are invalid or send empty fields.")
+      }
+      
+/*
       const user = await User.update(
-        { _id: req.user.id },
+        { _id: req.body.id },
         {
           email: req.body.email,
           phone: req.body.phone,
@@ -247,9 +319,12 @@ const usersManagement = {
         }
       );
       res.status(200).send(`Updated!`);
+      */
+
     } catch (error) {
-      res.status(404).send("Email ya existente");
+      res.status(404).send(error);
     }
+    
   },
   
   //Borrar un usuario

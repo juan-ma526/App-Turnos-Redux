@@ -101,7 +101,20 @@ const branchManagement = {
         catch(error){
             res.status(500).send(error)
         }
-    }
+    },
+
+    deleteShifts: async (req, res) => {
+        try {
+          const result = await Branch.updateOne({_id: req.params.id}, { $set: { shifts: [] } });
+          if (result.nModified === 0) {
+            return res.status(404).json({ message: 'Branch not found' });
+          }
+          res.status(200).json({ message: 'Shifts deleted successfully' });
+        } catch (error) {
+          console.error(error);
+          res.status(500).json({ message: 'Server error' });
+        }
+      }
 }
 
 

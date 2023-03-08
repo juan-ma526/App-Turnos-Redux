@@ -37,7 +37,7 @@ const UserSchema = new mongoose.Schema({
     idBranch: {
         type: String,
         default: null,
-    }
+    },
 
 })
 
