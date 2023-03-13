@@ -7,19 +7,30 @@ const ShiftSchema = new mongoose.Schema({
     idUser: {
         type: String
     },
+    infoUser: {
+        type: Object,
+        default: "none"
+    },
     dateBooking: {
-        type: Date
+        type: String
     },
     dateShift: {
-        type: String
+        type: Array
     },
     statusHour: {
-        type: String
+        type: String,
+        //STATUS "occupied" = OCUPADO. STATUS "cancelled" = CANCELADO. STATUS "finished" = finalizado.
+
     },
     statusShift: {
-        type: String
+        type: String,
+        default: "pending"
+        //STATUS "pending" = PENDIENTE. STATUS "assist" = ASISTIÓ. STATUS "no assist" = NO ASISTIÓ.
+    },
+    updatedAt: {
+        type: String,
+        default: "No updated!"
     }
-
 })
 
 module.exports = mongoose.model("Shifts", ShiftSchema) */
