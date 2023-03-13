@@ -3,7 +3,7 @@ import { Calendar } from "react-calendar";
 import { useDispatch, useSelector } from "react-redux";
 import NavBar from "../components/NavBar";
 import "react-calendar/dist/Calendar.css";
-import { getBranch } from "../store";
+import { createShift, getBranch } from "../store";
 import Countdown from "../components/Countdown";
 
 const PanelShift = () => {
@@ -11,6 +11,7 @@ const PanelShift = () => {
   const { user } = useSelector((state) => {
     return state.auth;
   });
+  const [idUser, setIdUser] = useState(user.id);
   const { data } = useSelector((state) => state.branch);
   const [value, onChange] = useState(new Date()); // saco el dia y mes que se reserva el turno
   const dayshift = new Date(); // saco el dia que se esta haciendo el turno
@@ -85,6 +86,21 @@ const PanelShift = () => {
       horarioFinal.push(arrayHorario[i]);
     }
   }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(
+      createShift({
+        idBranch,
+        idUser,
+        fullName,
+        email,
+        phone,
+        horaTurno,
+        dayshift,
+        value,
+      })
+    );
+  };
 
   return (
     <div>
@@ -106,7 +122,7 @@ const PanelShift = () => {
             {/* <div className="clientefinal-paneldereservas-stepper">              
             </div>*/}
 
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="clientefinal-paneldereservas-inputs">
                 <div className="clientefinal-paneldereservas-input-desktop2">
                   <div className="clientefinal-paneldereservas-txt">
@@ -212,13 +228,13 @@ const PanelShift = () => {
                   />
                 </div>
               </div>
+              <button className="clientefinal-paneldereservas-c-t-a-desktop10">
+                <span className="clientefinal-paneldereservas-text026 Semibold·16·20">
+                  <span>Confirmar reserva</span>
+                </span>
+              </button>
             </form>
           </div>
-          <button className="clientefinal-paneldereservas-c-t-a-desktop10">
-            <span className="clientefinal-paneldereservas-text026 Semibold·16·20">
-              <span>Confirmar reserva</span>
-            </span>
-          </button>
         </div>
         <div className="clientefinal-paneldereservas-calendar">
           <Calendar
