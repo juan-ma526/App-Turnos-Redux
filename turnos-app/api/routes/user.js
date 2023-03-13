@@ -1,28 +1,36 @@
 const express = require("express");
 const router = express.Router();
 
-const { validateAuth, validateAdmin, validateOperator } = require("../middleware/auth");
-
 const {
-    registerUser,
-    allUsers,
-    loginUser,
-    loggedUser,
-    //forgottenPassword,
-    deleteUser,
-    changeAdmin,
-    changeOperator,
-    createOperator,
-    logout,
-    updateLogedUser,
-    allOperators,
-    usersByBranch,
-  } = require("../controllers/user");
+
+  validateAuth,
+  validateAdmin,
+  validateOperator,
+} = require("../middleware/auth");
+
 const { validate } = require("../models/Branch");
 
 
-  //Registrar usuario
+const {
+  registerUser,
+  allUsers,
+  loginUser,
+  loggedUser,
+  //forgottenPassword,
+  deleteUser,
+  changeAdmin,
+  changeOperator,
+  logout,
+  updateLogedUser,
+  allOperators,
+  usersByBranch,
+  createOperator,
+} = require("../controllers/user");
+
+//Registrar usuario
 router.post("/register", registerUser);
+
+
 
 //Crear operador
 router.post("/createOperator", createOperator);
@@ -46,6 +54,7 @@ router.post("/login", loginUser);
 //router.put("/changepassword", forgottenPassword);
 
 //Actualizar usuario logeado
+
 router.put("/updateUser", validateAuth, updateLogedUser);
 
 //Borrar usuario

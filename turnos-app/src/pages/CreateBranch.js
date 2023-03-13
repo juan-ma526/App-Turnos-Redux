@@ -1,11 +1,88 @@
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import NavBar from "../components/NavBar";
+import { createBranch } from "../store";
+import Swal from "sweetalert2";
 
 const CreateBranch = () => {
+  const dispatch = useDispatch();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [capMax, setCapMax] = useState("");
+  const [beginTime, setBeginTime] = useState("");
+  const [closeTime, setCloseTime] = useState("");
+
+  const { error } = useSelector((state) => state.branch);
+
+  const arrayCapMax = [];
+  const arrayBeginTime = [];
+  const arrayCloseTime = [];
+
+  const llenarArray = () => {
+    for (let i = 10; i <= 100; i += 10) {
+      arrayCapMax.push(i);
+    }
+    for (let j = 0; j < 24; j++) {
+      for (let k = 0; k <= 30; k += 30) {
+        if (k === 0) {
+          arrayBeginTime.push(j + ":" + k + "0");
+          arrayCloseTime.push(j + ":" + k + "0");
+        } else {
+          arrayBeginTime.push(j + ":" + k);
+          arrayCloseTime.push(j + ":" + k);
+        }
+      }
+    }
+  };
+
+  llenarArray();
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+  const handleCapMaxChange = (e) => {
+    setCapMax(e.target.value);
+  };
+  const handleBeginTimeChange = (e) => {
+    setBeginTime(e.target.value);
+  };
+  const handleCloseTimeChange = (e) => {
+    setCloseTime(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(
+      createBranch({ name, email, phone, capMax, beginTime, closeTime })
+    );
+    Swal.fire({
+      title: "Exito",
+      text: "Sucursal Creada con Exito",
+      icon: "success",
+      allowOutsideClick: false,
+    });
+  };
+
+  if (error) {
+    Swal.fire({
+      title: "Error",
+      text: "Hubo un error en la creacion de la Sucursal",
+      icon: "error",
+      allowOutsideClick: false,
+    });
+  }
   return (
     <div>
       <div className="administrador-creacindesucursales-administrador-creacindesucursales">
         <NavBar />
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="administrador-creacindesucursales-formulario">
             <span className="administrador-creacindesucursales-text SemiBold·20·24">
               <span>Crear una nueva sucursal</span>
@@ -19,6 +96,8 @@ const CreateBranch = () => {
               <input
                 type="text"
                 className="administrador-creacindesucursales-input-desktop1"
+                onChange={handleNameChange}
+                value={name}
               />
             </div>
             <div className="administrador-creacindesucursales-input-desktop21">
@@ -30,6 +109,8 @@ const CreateBranch = () => {
               <input
                 type="email"
                 className="administrador-creacindesucursales-input-desktop11"
+                onChange={handleEmailChange}
+                value={email}
               />
             </div>
             <div className="administrador-creacindesucursales-fila">
@@ -42,6 +123,8 @@ const CreateBranch = () => {
                 <input
                   type="text"
                   className="administrador-creacindesucursales-input-desktop12"
+                  onChange={handlePhoneChange}
+                  value={phone}
                 />
               </div>
               <div className="administrador-creacindesucursales-input-desktop3">
@@ -51,9 +134,20 @@ const CreateBranch = () => {
                   </span>
                 </div>
                 <div className="administrador-creacindesucursales-input-desktop13">
-                  <select className="administrador-creacindesucursales-text10 Regular·14·20">
-                    <option value="10">10</option>
-                    <option value="50">50</option>
+                  <select
+                    onChange={handleCapMaxChange}
+                    className="administrador-creacindesucursales-text10 Regular·14·20"
+                  >
+                    <option key={0} value={0}>
+                      Seleccionar capacidad maxima..
+                    </option>
+                    {arrayCapMax.map((capacidad) => {
+                      return (
+                        <option key={capacidad} value={capacidad}>
+                          {capacidad}
+                        </option>
+                      );
+                    })}
                   </select>
                 </div>
               </div>
@@ -66,10 +160,20 @@ const CreateBranch = () => {
                   </span>
                 </div>
                 <div className="administrador-creacindesucursales-input-desktop14">
-                  <select className="administrador-creacindesucursales-text13 Regular·14·20">
-                    <option>10:00</option>
-                    <option>10:30</option>
-                    <option>11:00</option>
+                  <select
+                    onChange={handleBeginTimeChange}
+                    className="administrador-creacindesucursales-text13 Regular·14·20"
+                  >
+                    <option key={0} value={0}>
+                      Seleccione un Horario
+                    </option>
+                    {arrayBeginTime.map((horaInicio) => {
+                      return (
+                        <option key={horaInicio} value={horaInicio}>
+                          {horaInicio}
+                        </option>
+                      );
+                    })}
                   </select>
                 </div>
               </div>
@@ -80,10 +184,18 @@ const CreateBranch = () => {
                   </span>
                 </div>
                 <div className="administrador-creacindesucursales-input-desktop15">
-                  <select className="administrador-creacindesucursales-text17 Regular·14·20">
-                    <option>18:00</option>
-                    <option>18:30</option>
-                    <option>19:00</option>
+                  <select
+                    onChange={handleCloseTimeChange}
+                    className="administrador-creacindesucursales-text17 Regular·14·20"
+                  >
+                    <option key={0}>Seleccione Horario de Cierre</option>
+                    {arrayCloseTime.map((horaCierre) => {
+                      return (
+                        <option key={horaCierre} value={horaCierre}>
+                          {horaCierre}
+                        </option>
+                      );
+                    })}
                   </select>
                 </div>
               </div>

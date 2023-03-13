@@ -17,6 +17,7 @@ const {
   deleteShifts,
 } = require("../controllers/branch");
 
+
 //Crea una sucursal.
 router.post("/createBranch", validateAuth, validateAdmin, createBranch);
 
@@ -24,6 +25,7 @@ router.post("/createBranch", validateAuth, validateAdmin, createBranch);
 router.post("/deleteShifts/:id", deleteShifts);
 
 //Trae todas las sucursales.
+
 router.get("/allBranchs", allBranchs); //router.get("/allBranchs", validateAuth, validateAdmin, allBranchs)
 
 //Trae una sucursal por su ID.

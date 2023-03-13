@@ -38,8 +38,12 @@ const UserSchema = new mongoose.Schema({
         type: String,
         default: null,
     },
-
+    nameBranch: {
+    type: String,
+    default: null,
+  },
 })
+
 
 
 // Schema Hook => has de la password y creacion del salt del usuario

@@ -26,7 +26,9 @@ const NavBar = () => {
     <div className="header-header">
       <div className="header-c-t-a-desktop2">
         <span className="header-text">
-          <span>Reservar</span>
+          <Link className="link" to="/panelShift">
+            <span>Reservar</span>
+          </Link>
         </span>
       </div>
       <div className="header-men">
@@ -84,7 +86,9 @@ const NavBar = () => {
       <div className="header-men">
         <div className="header-c-t-a-desktop3">
           <span className="header-text">
-            <span>Reservas</span>
+            <Link className="link" to="/shiftOperatorView">
+              <span>Reservas</span>
+            </Link>
           </span>
           <svg
             className="header-user-interface"
@@ -102,7 +106,9 @@ const NavBar = () => {
         </div>
         <div className="header-c-t-a-desktop31 my-account">
           <span className="header-text2">
-            <span>Mi Cuenta</span>
+            <Link className="link" to="/profileOperator">
+              <span>Mi Cuenta</span>
+            </Link>
           </span>
           <svg
             className="header-user-interface1"
