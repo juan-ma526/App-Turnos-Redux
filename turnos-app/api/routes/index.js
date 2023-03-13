@@ -6,6 +6,6 @@ const Shift = require("./shift");
 
 router.use("/user", User);
 router.use("/branch", Branch);
-//router.use("/shift", Shift)
+router.use("/shift", Shift);
 
 module.exports = router;

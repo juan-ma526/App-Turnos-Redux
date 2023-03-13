@@ -1,36 +1,35 @@
-/* const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const ShiftSchema = new mongoose.Schema({
-    idBranch: {
-        type: String
-    },
-    idUser: {
-        type: String
-    },
-    infoUser: {
-        type: Object,
-        default: "none"
-    },
-    dateBooking: {
-        type: String
-    },
-    dateShift: {
-        type: Array
-    },
-    statusHour: {
-        type: String,
-        //STATUS "occupied" = OCUPADO. STATUS "cancelled" = CANCELADO. STATUS "finished" = finalizado.
+  idBranch: {
+    type: String,
+  },
+  idUser: {
+    type: String,
+  },
+  infoUser: {
+    type: Object,
+    default: "none",
+  },
+  dateBooking: {
+    type: String,
+  },
+  dateShift: {
+    type: Array,
+  },
+  statusHour: {
+    type: String,
+    //STATUS "occupied" = OCUPADO. STATUS "cancelled" = CANCELADO. STATUS "finished" = finalizado.
+  },
+  statusShift: {
+    type: String,
+    default: "pending",
+    //STATUS "pending" = PENDIENTE. STATUS "assist" = ASISTIÓ. STATUS "no assist" = NO ASISTIÓ.
+  },
+  updatedAt: {
+    type: String,
+    default: "No updated!",
+  },
+});
 
-    },
-    statusShift: {
-        type: String,
-        default: "pending"
-        //STATUS "pending" = PENDIENTE. STATUS "assist" = ASISTIÓ. STATUS "no assist" = NO ASISTIÓ.
-    },
-    updatedAt: {
-        type: String,
-        default: "No updated!"
-    }
-})
-
-module.exports = mongoose.model("Shifts", ShiftSchema) */
+module.exports = mongoose.model("Shifts", ShiftSchema);

@@ -231,7 +231,7 @@ const PanelShift = () => {
           />
         </div>
       </div>
-      {prueba ? <Countdown tiempo={prueba} /> : ""}
+      {/* {prueba ? <Countdown tiempo={prueba} /> : ""} */}
     </div>
   );
 };
