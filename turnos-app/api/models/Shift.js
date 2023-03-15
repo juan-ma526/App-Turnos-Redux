@@ -15,16 +15,16 @@ const ShiftSchema = new mongoose.Schema({
     type: String,
   },
   dateShift: {
-    type: Array,
+    type: String,
   },
   statusHour: {
     type: String,
-    //STATUS "occupied" = OCUPADO. STATUS "cancelled" = CANCELADO. STATUS "finished" = finalizado.
+    //STATUS "occupied" = OCUPADO. STATUS "cancelled" = CANCELADO. STATUS "finished" = finalizado. STATUS "expired" = EXPIRADO.
   },
   statusShift: {
     type: String,
     default: "pending",
-    //STATUS "pending" = PENDIENTE. STATUS "assist" = ASISTIÓ. STATUS "no assist" = NO ASISTIÓ.
+    //STATUS "pending" = PENDIENTE. STATUS "assist" = ASISTIÓ. STATUS "no assist" = NO ASISTIÓ. 
   },
   updatedAt: {
     type: String,

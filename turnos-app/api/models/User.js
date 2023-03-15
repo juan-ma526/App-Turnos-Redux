@@ -30,6 +30,9 @@ const UserSchema = new mongoose.Schema({
         type: String,
         default: "client",
     },
+    shifts: {
+      type: Array,
+    },
     dni: {
         type: String,
         unique: true,

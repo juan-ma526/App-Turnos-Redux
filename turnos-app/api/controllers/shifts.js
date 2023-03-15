@@ -9,25 +9,54 @@ const shiftManagement = {
 //CREA LOS TURNOS. HAY QUE PASAR "idUser, phone, hour, date, dateBooking, dateShift" POR EL BODY, Y POR PARAMETRO EL ID DE LA BRANCH.
   createShifts: async (req, res) => {
     try {
+         
+//Formatea la fecha del dia reservado.
+
+const dateTime = new Date(req.body.dateBooking);
+      
+const daysOfWeek = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+//const monthsOfYear = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+const monthsOfYear = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+const dayOfWeek = daysOfWeek[dateTime.getUTCDay()];
+const dayOfMonth = dateTime.getUTCDate();
+const monthOfYear = monthsOfYear[dateTime.getUTCMonth()];
+const year = dateTime.getUTCFullYear();
+const hour = req.body.hour;
+      
+const formattedDate = `${dayOfMonth}/${monthOfYear}/${year} - ${hour}`;
+console.log(formattedDate)
+
+//Formateo de fecha para el dia que se reserva.
+
+const shiftDateTime = new Date(req.body.dateShift);
+console.log(shiftDateTime)
+
+const dayWeek = daysOfWeek[shiftDateTime.getUTCDay()];
+const dayMonth = shiftDateTime.getUTCDate();
+const monthYear = monthsOfYear[shiftDateTime.getUTCMonth()];
+const shiftYear = shiftDateTime.getUTCFullYear();
+const actualHour = `${shiftDateTime.getHours()}:${shiftDateTime.getMinutes()}`
+console.log(actualHour)
+
+const formDate = `${dayMonth}/${monthYear}/${year} - ${actualHour}`
+
+console.log(formDate)
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+      
       const idBranch = req.params.id;
       const branch = await Branch.find({ _id: idBranch });
       const catchUser = await User.find({_id: req.body.idUser})
       const user = catchUser[0]
 
-      const availableShift = await Shift.findOne({dateShift: [{
-        hour: req.body.hour,
-        date: req.body.date
-      }],
+      const availableShift = await Shift.findOne({dateBooking: formattedDate,
      statusHour: "occupied",
     })
 
       if (availableShift){
         return res.status(400).send("Turno ya ocupado");
        }
-      const cancelledShift = await Shift.findOne({dateShift:[{
-        hour: req.body.hour,
-        date: req.body.date
-      }],
+      const cancelledShift = await Shift.findOne({dateBooking: formattedDate,
     statusHour: "cancelled"
     })
 
@@ -37,15 +66,12 @@ const shiftManagement = {
 
 
       const update = await Shift.updateOne({_id: req.body.idShift},{
-        dateBooking: req.body.dateBooking,
-        dateShift: [{
-          hour: req.body.hour,
-          date: req.body.date,
-        }],
+        dateBooking: formattedDate,
+        dateShift: formDate,
         idUser: req.body.idUser,
         infoUser: {
-          name: user.fullName,
-          email: user.email,
+          name: req.body.fullName,
+          email: req.body.email,
           phone: req.body.phone
         },
         statusHour: "occupied"
@@ -65,23 +91,22 @@ const shiftManagement = {
             idBranch: idBranch,
             idUser: req.body.idUser,
             infoUser: {
-              name: user.fullName,
-              email: user.email,
+              name: req.body.fullName,
+              email: req.body.email,
               phone: req.body.phone,
             },
-            dateBooking: req.body.dateBooking,
-            dateShift: [{
-              hour: req.body.hour,
-              date: req.body.date,
-            }],
+            dateBooking: formattedDate,
+            dateShift: formDate,
             statusHour: "occupied"
           });
           await shift.save();
          console.log(shift.id)
          await Branch.updateOne({ _id: idBranch }, { $push: { shifts: shift.id } });
          await User.updateOne({_id: req.body.idUser}, {phone: req.body.phone})
+         await User.updateOne({_id: req.body.idUser}, {$push: {shifts: shift.id}})
     
       res.status(201).send(shift);
+      
     } catch (error) {
       console.error(error);
       res.status(500).send('Server error!')
@@ -91,18 +116,32 @@ const shiftManagement = {
   //FUNCIÓN PARA EDITAR TURNOS. HAY QUE PASAR "idUser, idShift, hour, date, phone" POR EL BODY.
   updateShift: async function(req,res){
      try{
+
+      const dateTime = new Date(req.body.dateBooking);
+      
+const daysOfWeek = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+//const monthsOfYear = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+const monthsOfYear = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+const dayOfWeek = daysOfWeek[dateTime.getUTCDay()];
+const dayOfMonth = dateTime.getUTCDate();
+const monthOfYear = monthsOfYear[dateTime.getUTCMonth()];
+const year = dateTime.getUTCFullYear();
+const hour = req.body.hour;
+      
+const formattedDate = `${dayOfMonth}/${monthOfYear}/${year} - ${hour}`;
+console.log(formattedDate)
+
+
+
       const catchUser = await User.find({_id: req.body.idUser})
       const user = catchUser[0]
 
 
       const update = await Shift.updateOne({_id: req.body.idShift},{
-        dateShift: [{
-          hour: req.body.hour,
-          date: req.body.date,
-        }],
+        dateBooking: formattedDate,
         infoUser: {
-          name: user.fullName,
-          email: user.email,
+          name: req.body.fullName,
+          email: req.body.email,
           phone: req.body.phone
         },
         updatedAt: req.body.updatedAt
