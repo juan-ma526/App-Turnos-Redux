@@ -1,4 +1,4 @@
-.clientefinal-paneldereservas-clientefinal-paneldereservas {
+.clientefinal-paneldereservas-clientefinal-paneldereservas2 {
   /* Cliente final: Panel de reservas */
 
   position: relative;
@@ -8,9 +8,10 @@
   /* White */
 
   background: #ffffff;
-  left: 276px;
+
+  /* Cliente final: Panel de reservas */
 }
-.clientefinal-paneldereservas-mensaje {
+.clientefinal-paneldereservas-mensaje5 {
   /* Mensaje */
 
   /* Auto layout */
@@ -24,10 +25,10 @@
   position: absolute;
   width: 1176px;
   height: 236px;
-  left: 96px;
+  left: 365px;
   top: 144px;
 }
-.clientefinal-paneldereservas-user-interface {
+.clientefinal-paneldereservas-user-interface3 {
   /* User Interface */
 
   width: 48px;
@@ -39,7 +40,7 @@
   order: 0;
   flex-grow: 0;
 }
-.clientefinal-paneldereservas-union {
+.clientefinal-paneldereservas-union3 {
   /* Union */
 
   position: absolute;
@@ -166,7 +167,7 @@
   order: 1;
   flex-grow: 1;
 }
-.clientefinal-paneldereservas-pedido {
+.clientefinal-paneldereservas-pedido3 {
   /* Pedido */
 
   /* Auto layout */
@@ -180,10 +181,10 @@
   position: absolute;
   width: 1176px;
   height: 260px;
-  left: 96px;
+  left: 365px;
   top: 436px;
 }
-.clientefinal-paneldereservas-border {
+.clientefinal-paneldereservas-border12 {
   /* Border */
 
   width: 1176px;
@@ -199,7 +200,7 @@
   order: 0;
   flex-grow: 0;
 }
-.clientefinal-paneldereservas-content {
+.clientefinal-paneldereservas-content3 {
   /* Content */
 
   /* Auto layout */
@@ -341,7 +342,7 @@
   order: 1;
   flex-grow: 1;
 }
-.clientefinal-paneldereservas-c-t-a-desktop2 {
+.clientefinal-paneldereservas-c-t-a-desktop22 {
   /* CTA-Desktop-2 */
 
   /* Auto layout */
@@ -358,6 +359,8 @@
 
   background: rgba(164, 66, 241, 0.1);
   border-radius: 8px;
+  border: none;
+  cursor: pointer;
 
   /* Inside auto layout */
 
@@ -366,7 +369,7 @@
   align-self: stretch;
   flex-grow: 0;
 }
-.clientefinal-paneldereservas-user-interface1 {
+.clientefinal-paneldereservas-user-interface111 {
   /* User Interface */
 
   width: 20px;
@@ -407,7 +410,7 @@
   order: 1;
   flex-grow: 0;
 }
-.clientefinal-paneldereservas-c-t-a-desktop4 {
+.clientefinal-paneldereservas-c-t-a-desktop44 {
   /* CTA-Desktop-4 */
 
   /* Auto layout */
@@ -426,6 +429,7 @@
 
   background: #f5f5f5;
   border-radius: 8px;
+  cursor: pointer;
 
   /* Inside auto layout */
 
@@ -434,7 +438,7 @@
   align-self: stretch;
   flex-grow: 0;
 }
-.clientefinal-paneldereservas-user-interface2 {
+.clientefinal-paneldereservas-user-interface222 {
   /* User Interface */
 
   width: 20px;
