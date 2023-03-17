@@ -29,6 +29,7 @@ function App() {
         <Route path="/shiftOperatorView" element={<ShiftOperatorView />} />
         <Route path="/profileOperator" element={<ProfileOperator />} />
         <Route path="/profileUser" element={<ProfileUser />} />
+        <Route path="/finalPanelShift" element={<FinalPanelShift />} />
       </Routes>
     </div>
   );

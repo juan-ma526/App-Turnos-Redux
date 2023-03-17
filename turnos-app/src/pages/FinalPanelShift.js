@@ -1,12 +1,18 @@
 import { FiCheck } from "react-icons/fi";
-
+import { useSelector } from "react-redux";
+import NavBar from "../components/NavBar";
 const FinalPanelShift = () => {
+  const { dataShift } = useSelector((state) => {
+    return state.shift;
+  });
+
   return (
     <div>
-      <div className="clientefinal-paneldereservas-clientefinal-paneldereservas">
-        <div className="clientefinal-paneldereservas-mensaje">
-          <div className="clientefinal-paneldereservas-user-interface">
-            <FiCheck className="clientefinal-paneldereservas-union" />
+      <div className="clientefinal-paneldereservas-clientefinal-paneldereservas2">
+        <NavBar />
+        <div className="clientefinal-paneldereservas-mensaje5">
+          <div className="clientefinal-paneldereservas-user-interface3">
+            <FiCheck className="clientefinal-paneldereservas-union3" />
           </div>
           <span className="clientefinal-paneldereservas-text">
             <span>¡Gracias por tu reserva!</span>
@@ -15,7 +21,8 @@ const FinalPanelShift = () => {
             <span>
               <span>
                 En hasta 5 minutos, recibirás un correo electrónico en
-                ivan@e-cruce.com con todos los detalles de tu reservación.
+                {" " + dataShift.infoUser.email} con todos los detalles de tu
+                reservación.
               </span>
               <br></br>
               <span>
@@ -29,9 +36,9 @@ const FinalPanelShift = () => {
             </span>
           </div>
         </div>
-        <div className="clientefinal-paneldereservas-pedido">
+        <div className="clientefinal-paneldereservas-pedido3">
           <svg
-            className="clientefinal-paneldereservas-border"
+            className="clientefinal-paneldereservas-border12"
             width="1176"
             height="2"
             viewBox="0 0 1176 2"
@@ -41,27 +48,27 @@ const FinalPanelShift = () => {
             <line y1="1" x2="1176" y2="1" stroke="#F5F5F5" strokeWidth="2" />
           </svg>
 
-          <div className="clientefinal-paneldereservas-content">
+          <div className="clientefinal-paneldereservas-content3">
             <div className="clientefinal-paneldereservas-pedido1">
               <span className="clientefinal-paneldereservas-text09">
                 <span>Reserva</span>
                 <span className="clientefinal-paneldereservas-text10">
-                  #1043812955480-01
+                  {"#" + dataShift._id}
                 </span>
               </span>
               <div className="clientefinal-paneldereservas-info">
                 <span className="clientefinal-paneldereservas-text12">
                   <span>
-                    Hecho el 10/10/2022 a las 11:35 hs para el 12/10/2022 a las
-                    13:00 hs
+                    Hecho el {dataShift.dateShift} para el{" "}
+                    {dataShift.dateBooking}
                   </span>
                 </span>
               </div>
             </div>
             <div className="clientefinal-paneldereservas-c-t-a">
-              <div className="clientefinal-paneldereservas-c-t-a-desktop2">
+              <button className="clientefinal-paneldereservas-c-t-a-desktop22">
                 <svg
-                  className="clientefinal-paneldereservas-user-interface1"
+                  className="clientefinal-paneldereservas-user-interface111"
                   width="17"
                   height="18"
                   viewBox="0 0 17 18"
@@ -77,10 +84,10 @@ const FinalPanelShift = () => {
                 <span className="clientefinal-paneldereservas-text14">
                   <span>Editar reserva</span>
                 </span>
-              </div>
-              <div className="clientefinal-paneldereservas-c-t-a-desktop4">
+              </button>
+              <div className="clientefinal-paneldereservas-c-t-a-desktop44">
                 <svg
-                  className="clientefinal-paneldereservas-user-interface2"
+                  className="clientefinal-paneldereservas-user-interface222"
                   width="11"
                   height="12"
                   viewBox="0 0 11 12"
@@ -102,7 +109,7 @@ const FinalPanelShift = () => {
           <div className="clientefinal-paneldereservas-info1">
             <div className="clientefinal-paneldereservas-informacin">
               <span className="clientefinal-paneldereservas-text18">
-                <span>Ivan Cruce</span>
+                <span>{dataShift.infoUser.name}</span>
               </span>
               <div className="clientefinal-paneldereservas-data">
                 <div className="clientefinal-paneldereservas-txt">
@@ -110,7 +117,7 @@ const FinalPanelShift = () => {
                     <span>Mail:</span>
                   </span>
                   <span className="clientefinal-paneldereservas-text22">
-                    <span>ivan@e-cruce.com</span>
+                    <span>{dataShift.infoUser.email}</span>
                   </span>
                 </div>
                 <div className="clientefinal-paneldereservas-txt1">
@@ -118,7 +125,7 @@ const FinalPanelShift = () => {
                     <span>Teléfono:</span>
                   </span>
                   <span className="clientefinal-paneldereservas-text26">
-                    <span>1123456789</span>
+                    <span>{dataShift.infoUser.phone}</span>
                   </span>
                 </div>
               </div>
