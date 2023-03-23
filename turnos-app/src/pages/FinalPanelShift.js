@@ -1,11 +1,26 @@
 import { FiCheck } from "react-icons/fi";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import NavBar from "../components/NavBar";
+import { cancelShift } from "../store";
+
 const FinalPanelShift = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { dataShift } = useSelector((state) => {
     return state.shift;
   });
 
+  const handleClickCancel = (e) => {
+    dispatch(cancelShift({ idShift: dataShift._id }));
+    Swal.fire({
+      title: "Exito",
+      text: "Turno Cancelado",
+      icon: "success",
+      allowOutsideClick: false,
+    }).then(() => navigate("/profileUser"));
+  };
   return (
     <div>
       <div className="clientefinal-paneldereservas-clientefinal-paneldereservas2">
@@ -85,7 +100,11 @@ const FinalPanelShift = () => {
                   <span>Editar reserva</span>
                 </span>
               </button>
-              <div className="clientefinal-paneldereservas-c-t-a-desktop44">
+
+              <button
+                onClick={handleClickCancel}
+                className="clientefinal-paneldereservas-c-t-a-desktop44"
+              >
                 <svg
                   className="clientefinal-paneldereservas-user-interface222"
                   width="11"
@@ -103,7 +122,7 @@ const FinalPanelShift = () => {
                 <span className="clientefinal-paneldereservas-text16">
                   <span>Cancelar reserva</span>
                 </span>
-              </div>
+              </button>
             </div>
           </div>
           <div className="clientefinal-paneldereservas-info1">

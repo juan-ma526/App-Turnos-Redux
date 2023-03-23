@@ -30,6 +30,7 @@ function App() {
         <Route path="/profileOperator" element={<ProfileOperator />} />
         <Route path="/profileUser" element={<ProfileUser />} />
         <Route path="/finalPanelShift" element={<FinalPanelShift />} />
+        <Route path="/cancelledShift" element={<CancelledShift />} />
       </Routes>
     </div>
   );

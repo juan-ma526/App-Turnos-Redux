@@ -21,7 +21,7 @@
   gap: 16px;
 
   position: absolute;
-  width: 1176px;
+  width: 1249px;
   height: 768px;
   left: 260px;
   top: 208px;
@@ -39,7 +39,7 @@
   padding: 24px;
   gap: 16px;
 
-  width: 1176px;
+  width: 1288px;
   height: 96px;
 
   /* White */
@@ -378,4 +378,10 @@
   order: 1;
   align-self: stretch;
   flex-grow: 0;
+}
+.link-cancel-button {
+  display: flex;
+
+  order: 5;
+  text-decoration: none;
 }

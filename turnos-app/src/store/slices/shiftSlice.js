@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { cancelShift } from "../thunks/cancelShift";
 import { createShift } from "../thunks/createShift";
 import { getAllShiftByUser } from "../thunks/getAllShiftByUser";
 
@@ -9,6 +10,7 @@ const shiftSlice = createSlice({
     error: false,
     dataShift: [],
     created: false,
+    msg: "",
   },
   reducers: {
     resetStore: (state, action) => {
@@ -45,6 +47,20 @@ const shiftSlice = createSlice({
       state.created = true;
     });
     builder.addCase(getAllShiftByUser.rejected, (state, action) => {
+      state.isLoading = false;
+      state.created = false;
+      state.error = true;
+    });
+    builder.addCase(cancelShift.pending, (state, action) => {
+      state.isLoading = true;
+    });
+    builder.addCase(cancelShift.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.msg = action.payload;
+      state.created = true;
+      state.error = false;
+    });
+    builder.addCase(cancelShift.rejected, (state, action) => {
       state.isLoading = false;
       state.created = false;
       state.error = true;
