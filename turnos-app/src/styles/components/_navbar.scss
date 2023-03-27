@@ -548,6 +548,7 @@
   }
 
   button:hover {
-    color: $black;
+    background-color: $secondaryColor;
+    color: $white;
   }
 }
