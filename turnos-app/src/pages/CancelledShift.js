@@ -12,7 +12,7 @@ const CancelledShift = () => {
   const [dayBooking, setDayBooking] = useState("");
   const [hourBooking, setHourBooking] = useState("");
 
-  const { dataShift } = useSelector((state) => {
+  const { allDataShift } = useSelector((state) => {
     return state.shift;
   });
 
@@ -20,7 +20,7 @@ const CancelledShift = () => {
     dispatch(getAllShiftByUser());
   }, [dispatch]);
 
-  const shiftsUser = dataShift.filter((shift) => shift._id === id);
+  const shiftsUser = allDataShift.filter((shift) => shift._id === id);
   //console.log(shiftsUser[0].infoUser.name);
   const splitBooking = shiftsUser[0].dateBooking.split("-");
 

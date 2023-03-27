@@ -25,3 +25,4 @@ export * from "./thunks/createBranch";
 export * from "./thunks/createShift";
 export * from "./thunks/getAllShiftByUser";
 export * from "./thunks/cancelShift";
+export * from "./thunks/assistShift";

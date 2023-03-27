@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { assistShift } from "../thunks/assistShift";
 import { cancelShift } from "../thunks/cancelShift";
 import { createShift } from "../thunks/createShift";
 import { getAllShiftByUser } from "../thunks/getAllShiftByUser";
@@ -9,6 +10,7 @@ const shiftSlice = createSlice({
     isLoading: false,
     error: false,
     dataShift: [],
+    allDataShift: [],
     created: false,
     msg: "",
   },
@@ -42,7 +44,7 @@ const shiftSlice = createSlice({
       state.isLoading = true;
     });
     builder.addCase(getAllShiftByUser.fulfilled, (state, action) => {
-      state.dataShift = action.payload;
+      state.allDataShift = action.payload;
       state.isLoading = false;
       state.created = true;
     });
@@ -61,6 +63,20 @@ const shiftSlice = createSlice({
       state.error = false;
     });
     builder.addCase(cancelShift.rejected, (state, action) => {
+      state.isLoading = false;
+      state.created = false;
+      state.error = true;
+    });
+    builder.addCase(assistShift.pending, (state, action) => {
+      state.isLoading = true;
+    });
+    builder.addCase(assistShift.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.msg = action.payload;
+      state.created = true;
+      state.error = false;
+    });
+    builder.addCase(assistShift.rejected, (state, action) => {
       state.isLoading = false;
       state.created = false;
       state.error = true;

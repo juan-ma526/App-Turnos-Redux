@@ -222,7 +222,7 @@ const shiftManagement = {
         }
       );
 
-      res.status(201).send(shift);
+      res.status(201).send("Turno no asistido");
     } catch (error) {
       res.status(500).send(error);
     }
@@ -238,7 +238,7 @@ const shiftManagement = {
         }
       );
 
-      res.status(201).send(shift);
+      res.status(201).send("Turno Asistido");
     } catch (error) {
       res.status(500).send(error);
     }

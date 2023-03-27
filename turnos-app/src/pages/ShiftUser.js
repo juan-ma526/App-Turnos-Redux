@@ -12,15 +12,15 @@ const ShiftUser = () => {
   });
   const [idUser, setIdUser] = useState(user.id);
 
-  const { dataShift } = useSelector((state) => {
+  const { allDataShift } = useSelector((state) => {
     return state.shift;
   });
-  console.log(dataShift);
+
   useEffect(() => {
     dispatch(getAllShiftByUser());
   }, []);
 
-  const shiftsUser = dataShift.filter((shift) => shift.idUser === idUser);
+  const shiftsUser = allDataShift.filter((shift) => shift.idUser === idUser);
 
   const renderedShiftUser = shiftsUser.map((shift, index) => {
     return (
