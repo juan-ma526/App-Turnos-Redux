@@ -1564,3 +1564,12 @@
 .letter-process {
   color: $primaryColor;
 }
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+  font-size: 1.9rem;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: $primaryColor !important;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
+  color: green !important;
+}

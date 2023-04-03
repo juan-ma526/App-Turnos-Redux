@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import NavBar from "../components/NavBar";
 import "react-calendar/dist/Calendar.css";
 import { createShift, getBranch } from "../store";
-import Countdown from "../components/Countdown";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Step, StepLabel, Stepper } from "@mui/material";
 
 const PanelShift = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const PanelShift = () => {
   const { created, error } = useSelector((state) => {
     return state.shift;
   });
-
+  const [activeStep, setActiveStep] = useState(0);
   const [idUser, setIdUser] = useState(user.id);
   const { data } = useSelector((state) => state.branch);
   const [value, onChange] = useState(new Date()); // saco el dia y mes que se reserva el turno
@@ -37,6 +37,7 @@ const PanelShift = () => {
   };
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
+    setActiveStep(3);
   };
   const handlePhoneChange = (e) => {
     setPhone(e.target.value);
@@ -70,10 +71,12 @@ const PanelShift = () => {
     setBeginTime(branch[2]);
     setCloseTime(branch[3]);
     setCapMax(branch[4]);
+    setActiveStep(1);
   };
 
   const handleHoraShiftChange = (e) => {
     setHoraTurno(e.target.value);
+    setActiveStep(2);
   };
 
   const arrayHorario = [];
@@ -161,10 +164,20 @@ const PanelShift = () => {
                 <span>Completá el formulario</span>
               </span>
             </div>
-            {/* <div className="clientefinal-paneldereservas-stepper">              
-            </div>*/}
 
             <form onSubmit={handleSubmit}>
+              <Stepper activeStep={activeStep} alternativeLabel>
+                <Step>
+                  <StepLabel>Elegir sucursal</StepLabel>
+                </Step>
+                <Step>
+                  <StepLabel>Seleccionar Hora y Fecha</StepLabel>
+                </Step>
+                <Step>
+                  <StepLabel>Completa el formulario</StepLabel>
+                </Step>
+              </Stepper>
+
               <div className="clientefinal-paneldereservas-inputs">
                 <div className="clientefinal-paneldereservas-input-desktop2">
                   <div className="clientefinal-paneldereservas-txt">
@@ -289,7 +302,6 @@ const PanelShift = () => {
           />
         </div>
       </div>
-      {/* {prueba ? <Countdown tiempo={prueba} /> : ""} */}
     </div>
   );
 };
