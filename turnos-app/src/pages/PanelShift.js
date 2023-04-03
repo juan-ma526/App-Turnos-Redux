@@ -112,18 +112,36 @@ const PanelShift = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(
-      createShift({
-        idBranch,
-        idUser,
-        fullName,
-        email,
-        phone,
-        horaTurno,
-        dateShift,
-        value,
-      })
-    );
+    if (
+      idBranch &&
+      idUser &&
+      fullName &&
+      email &&
+      phone &&
+      horaTurno &&
+      dateShift &&
+      value
+    ) {
+      dispatch(
+        createShift({
+          idBranch,
+          idUser,
+          fullName,
+          email,
+          phone,
+          horaTurno,
+          dateShift,
+          value,
+        })
+      );
+    } else {
+      Swal.fire({
+        title: "Error",
+        text: "Tenes que llenar todos los campos",
+        icon: "error",
+        allowOutsideClick: false,
+      });
+    }
   };
 
   return (
