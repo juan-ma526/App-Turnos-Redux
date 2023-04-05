@@ -1,0 +1,1270 @@
+.administrador-reportes-administrador-reportes {
+  /* Administrador: Reportes */
+
+  position: relative;
+  width: 100%;
+  height: 1170px;
+
+  /* Grey 1 */
+
+  background: #f5f5f5;
+}
+.administrador-reportes-cards {
+  /* cards */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+
+  position: absolute;
+  width: 1175px;
+  height: 166px;
+  left: 280px;
+  top: 240px;
+}
+.administrador-reportes-card {
+  /* Card */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 381px;
+  height: 166px;
+
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.administrador-reportes-content {
+  /* Content */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 20px 16px;
+  gap: 8px;
+
+  width: 381px;
+  height: 125px;
+
+  /* Secundario */
+
+  background: #cc6aff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-txt {
+  /* Txt */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+
+  width: 244px;
+  height: 73px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.administrador-reportes-text {
+  /* 100 */
+
+  width: 244px;
+  height: 47px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  /* identical to box height */
+
+  /* White */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-text02 {
+  /* Total de reservas */
+
+  width: 244px;
+  height: 18px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+
+  /* White */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-user-interface {
+  /* User Interface */
+
+  width: 89px;
+  height: 89px;
+
+  opacity: 0.3;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-base {
+  /* Base */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  width: 381px;
+  height: 41px;
+
+  /* Principal */
+
+  background: #a442f1;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-card1 {
+  /* Card */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 381px;
+  height: 166px;
+
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-content1 {
+  /* Content */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 20px 16px;
+  gap: 8px;
+
+  width: 381px;
+  height: 125px;
+
+  /* Secundario */
+
+  background: #cc6aff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-txt1 {
+  /* Txt */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+
+  width: 244px;
+  height: 73px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.administrador-reportes-text04 {
+  /* 100 */
+
+  width: 244px;
+  height: 47px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  /* identical to box height */
+
+  /* White */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-text06 {
+  /* Total de reservas */
+
+  width: 244px;
+  height: 18px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+
+  /* White */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-user-interface1 {
+  /* User Interface */
+
+  width: 89px;
+  height: 89px;
+
+  opacity: 0.3;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+/* .administrador-reportes-union {
+  top: 7.416666507720947px;
+  left: 7.416666507720947px;
+  width: 74px;
+  height: 74px;
+  position: absolute;
+} */
+.administrador-reportes-base1 {
+  /* Base */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  width: 381px;
+  height: 41px;
+
+  /* Principal */
+
+  background: #a442f1;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-card2 {
+  /* Card */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 381px;
+  height: 166px;
+
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+.administrador-reportes-content2 {
+  /* Content */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 20px 16px;
+  gap: 8px;
+
+  width: 381px;
+  height: 125px;
+
+  /* Secundario */
+
+  background: #cc6aff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-txt2 {
+  /* Txt */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+
+  width: 244px;
+  height: 73px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.administrador-reportes-text08 {
+  /* 100 */
+
+  width: 244px;
+  height: 47px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  /* identical to box height */
+
+  /* White */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-text10 {
+  /* Total de reservas */
+
+  width: 244px;
+  height: 18px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+
+  /* White */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-user-interface2 {
+  /* User Interface */
+
+  width: 89px;
+  height: 89px;
+
+  opacity: 0.3;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+/* .administrador-reportes-union1 {
+  top: 7.416666507720947px;
+  left: 7.416666507720947px;
+  width: 74px;
+  height: 74px;
+  position: absolute;
+} */
+.administrador-reportes-base2 {
+  /* Base */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  width: 381px;
+  height: 41px;
+
+  /* Principal */
+
+  background: #a442f1;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-example2 {
+  /* Example2 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 32px;
+  gap: 24px;
+
+  position: absolute;
+  width: 779px;
+  height: 370px;
+  left: 679px;
+  top: 426px;
+
+  /* White */
+
+  background: #ffffff;
+  /* Shadow card */
+
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+}
+.administrador-reportes-head {
+  /* Head */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
+
+  width: 715px;
+  height: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-txt3 {
+  /* Txt */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+
+  width: 67px;
+  height: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.administrador-reportes-border {
+  /* Border */
+
+  width: 12px;
+  height: 0px;
+
+  /* Principal */
+
+  border: 2px solid #a442f1;
+  border-radius: 20px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.administrador-reportes-text12 {
+  /* Txt */
+
+  width: 47px;
+  height: 16px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  /* identical to box height, or 145% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-variant: all-small-caps;
+
+  /* Grey 7 */
+
+  color: #6e6e6e;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-txt4 {
+  /* Txt */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+
+  width: 96px;
+  height: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-border1 {
+  /* Border */
+
+  width: 12px;
+  height: 0px;
+
+  /* Error */
+
+  border: 2px solid #e53939;
+  border-radius: 20px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.administrador-reportes-text14 {
+  /* Txt */
+
+  width: 76px;
+  height: 16px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  /* identical to box height, or 145% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-variant: all-small-caps;
+
+  /* Grey 7 */
+
+  color: #6e6e6e;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-grfico {
+  /* Gráfico */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+
+  width: 715px;
+  height: 246px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.administrador-reportes-das {
+  /* Días */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
+
+  width: 623px;
+  height: 12px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+.administrador-reportes-text40 {
+  /* Lunes */
+
+  width: 100.4px;
+  height: 12px;
+
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 12px;
+  /* identical to box height, or 109% */
+
+  /* Grey 8 */
+
+  color: #505050;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.administrador-reportes-text42 {
+  /* Martes */
+
+  width: 100.4px;
+  height: 12px;
+
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 12px;
+  /* identical to box height, or 109% */
+
+  /* Grey 8 */
+
+  color: #505050;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+.administrador-reportes-text44 {
+  /* Miércoles */
+
+  width: 100.4px;
+  height: 12px;
+
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 12px;
+  /* identical to box height, or 109% */
+
+  /* Grey 8 */
+
+  color: #505050;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 1;
+}
+.administrador-reportes-text46 {
+  /* Jueves */
+
+  width: 100.4px;
+  height: 12px;
+
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 12px;
+  /* identical to box height, or 109% */
+
+  /* Grey 8 */
+
+  color: #505050;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 3;
+  flex-grow: 1;
+}
+.administrador-reportes-text48 {
+  /* Viernes */
+
+  width: 100.4px;
+  height: 12px;
+
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 12px;
+  /* identical to box height, or 109% */
+
+  /* Grey 8 */
+
+  color: #505050;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 4;
+  flex-grow: 1;
+}
+.administrador-reportes-text50 {
+  /* Sábado */
+
+  width: 61px;
+  height: 12px;
+
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 12px;
+  /* identical to box height, or 109% */
+
+  /* Grey 8 */
+
+  color: #505050;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 5;
+  flex-grow: 0;
+}
+.administrador-reportes-reservasvs-asistencias {
+  /* Reservas vs Asistencias */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 24px;
+
+  position: absolute;
+  width: 381px;
+  height: 370px;
+  left: 277px;
+  top: 426px;
+
+  /* White */
+
+  background: #ffffff;
+  /* Shadow card */
+
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 18px;
+}
+.administrador-reportes-head1 {
+  /* Head */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+
+  width: 317px;
+  height: 66px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-text52 {
+  /* Reservas vs Asistencias */
+
+  width: 317px;
+  height: 20px;
+
+  /* Semibold · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  font-feature-settings: "ordn" on, "liga" off;
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-input-desktop1 {
+  /* Input Desktop 1 */
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 8px 8px 12px;
+  gap: 8px;
+
+  width: 317px;
+  height: 36px;
+
+  /* Grey 3 */
+
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-text54 {
+  /* Txt */
+
+  width: 269px;
+  height: 20px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+
+  display: flex;
+  align-items: center;
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.administrador-reportes-info {
+  /* Info */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+
+  width: 315px;
+  height: 158px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-grfico1 {
+  /* Gráfico */
+
+  width: 158px;
+  height: 158px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.administrador-reportes-referencias {
+  /* Referencias */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+
+  width: 133px;
+  height: 56px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-referencia {
+  /* Referencia */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+
+  width: 133px;
+  height: 20px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.administrador-reportes-rectangle1 {
+  /* Rectangle 1 */
+
+  width: 20px;
+  height: 20px;
+
+  /* Secundario */
+
+  background: #cc6aff;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.administrador-reportes-text56 {
+  /* Asistencia */
+
+  width: 66px;
+  height: 20px;
+
+  /* Regular · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-text58 {
+  /* 69% */
+
+  width: 27px;
+  height: 20px;
+
+  /* Regular · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+.administrador-reportes-referencia1 {
+  /* Referencia */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+
+  width: 125px;
+  height: 20px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-rectangle11 {
+  /* Rectangle 1 */
+
+  width: 20px;
+  height: 20px;
+
+  /* Principal */
+
+  background: #a442f1;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.administrador-reportes-text60 {
+  /* Reservas */
+
+  width: 58px;
+  height: 20px;
+
+  /* Regular · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.administrador-reportes-text62 {
+  /* 31% */
+
+  width: 27px;
+  height: 20px;
+
+  /* Regular · 14 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  /* Black */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+.administrador-reportes-ct-desktop2 {
+  /* CTA-Desktop-2 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 4px;
+
+  width: 317px;
+  height: 44px;
+
+  background: rgba(164, 66, 241, 0.1);
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.administrador-reportes-text64 {
+  /* Txt */
+
+  width: 269px;
+  height: 20px;
+
+  /* Semibold · 16 · 20 */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  align-items: center;
+  text-align: center;
+  font-feature-settings: "zero" on;
+
+  /* Principal */
+
+  color: #a442f1;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
