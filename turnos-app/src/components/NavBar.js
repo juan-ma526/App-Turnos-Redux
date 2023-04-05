@@ -194,7 +194,9 @@ const NavBar = () => {
         </div>
         <div className="header-c-t-a-desktop32">
           <span className="header-text08">
-            <span>Reportes</span>
+            <Link className="link" to="/reports">
+              <span>Reportes</span>
+            </Link>
           </span>
           <svg
             className="header-files"

@@ -13,6 +13,8 @@ import OperatorListAdmin from "./pages/OperatorListAdmin";
 import ProfileAdmin from "./pages/ProfileAdmin";
 import CreateBranch from "./pages/CreateBranch";
 import CreateOperator from "./pages/CreateOperator";
+import Reports from "./pages/Reports";
+
 function App() {
   return (
     <div>
@@ -31,6 +33,7 @@ function App() {
         <Route path="/profileUser" element={<ProfileUser />} />
         <Route path="/finalPanelShift" element={<FinalPanelShift />} />
         <Route path="/cancelledShift" element={<CancelledShift />} />
+        <Route path="/reports" element={<Reports />} />
       </Routes>
     </div>
   );
