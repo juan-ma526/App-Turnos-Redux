@@ -1,7 +1,5 @@
 import * as d3 from "d3";
 import React, { useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getAllShiftByUser } from "../store";
 
 const PieChart = ({ data }) => {
   const asistencia = data.filter((shift) => {
