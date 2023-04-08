@@ -1,22 +1,22 @@
 import * as d3 from "d3";
 import React, { useEffect, useRef } from "react";
 
-const PieChart = ({ data }) => {
-  const asistencia = data.filter((shift) => {
+const PieChart = ({ datos }) => {
+  const svgRef = useRef(null);
+  const asistencia = datos.filter((shift) => {
     return shift.statusHour === "finished";
   });
-  const faltas = data.filter((shift) => {
+  const faltas = datos.filter((shift) => {
     return shift.statusHour === "cancelled";
   });
-
-  const svgRef = useRef();
+  const data = [asistencia.length, faltas.length];
   const width = 158;
   const height = 158;
 
   useEffect(() => {
-    const svg = d3.select(svgRef.current);
-    const data = [asistencia.length, faltas.length];
     const colors = ["#CC6AFF", "#A442F1"];
+    const svg = d3.select(svgRef.current);
+
     const pie = d3.pie()(data);
     const arc = d3
       .arc()
