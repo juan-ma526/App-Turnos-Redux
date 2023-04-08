@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar";
 import Advertising from "../components/Advertising";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllShiftByUser } from "../store";
+import LineChart from "../components/LineChart";
 
 const Reports = () => {
   const dispatch = useDispatch();
@@ -101,27 +102,9 @@ const Reports = () => {
               </span>
             </div>
           </div>
-          <div className="administrador-reportes-grfico"></div>
-          {/*  <div className="administrador-reportes-das">
-            <span className="administrador-reportes-text40">
-              <span>Lunes</span>
-            </span>
-            <span className="administrador-reportes-text42">
-              <span>Martes</span>
-            </span>
-            <span className="administrador-reportes-text44">
-              <span>Miércoles</span>
-            </span>
-            <span className="administrador-reportes-text46">
-              <span>Jueves</span>
-            </span>
-            <span className="administrador-reportes-text48">
-              <span>Viernes</span>
-            </span>
-            <span className="administrador-reportes-text50">
-              <span>Sábado</span>
-            </span>
-          </div> */}
+          <div className="administrador-reportes-grfico">
+            <LineChart datos={allDataShift} />
+          </div>
         </div>
         <div className="administrador-reportes-reservasvs-asistencias">
           <div className="administrador-reportes-head1">
@@ -136,7 +119,7 @@ const Reports = () => {
           </div>
           <div className="administrador-reportes-info">
             <div className="administrador-reportes-grfico1">
-              <PieChart data={allDataShift} />
+              <PieChart datos={allDataShift} />
             </div>
             <div className="administrador-reportes-referencias">
               <div className="administrador-reportes-referencia">
