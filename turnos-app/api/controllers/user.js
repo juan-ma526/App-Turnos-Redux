@@ -6,7 +6,9 @@ const { generateToken } = require("../config/token");
 const bcrypt = require("bcrypt");
 
 const usersManagement = {
+  
   //Función para registrar un usuario.
+
   registerUser: async function (req, res) {
     try {
       let usuario = await User.findOne({ email: req.body.email });
@@ -70,8 +72,6 @@ const usersManagement = {
           };
           let token = generateToken(payload);
           res.cookie("token", token);
-          /* const prueba = res.json({ token, user: payload });
-          console.log({ user: payload }); */
           return res.json({ token, user: payload });
         } else {
           return res.status(401).json({ msg: "Invalid credential" });
@@ -196,7 +196,6 @@ const usersManagement = {
 
   createOperator: async function (req, res) {
     try {
-      let newHash = bcrypt.hashSync(req.body.password, 10);
 
       const newOp = new User({
         fullName: req.body.fullname,
@@ -292,18 +291,6 @@ const usersManagement = {
           .status(400)
           .send("Credentials are invalid or send empty fields.");
       }
-
-      /*
-      const user = await User.update(
-        { _id: req.body.id },
-        {
-          email: req.body.email,
-          phone: req.body.phone,
-          password: newHash,
-        }
-      );
-      res.status(200).send(`Updated!`);
-      */
     } catch (error) {
       res.status(404).send(error);
     }

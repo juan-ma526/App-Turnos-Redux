@@ -4,7 +4,6 @@ const validateAuth = async (req, res, next) => {
   if (!req.headers.cookie) return res.sendStatus(401);
   const token = req.headers.cookie.split("token=");
 
-  //const { user } = validateToken(token[1]);
   req.user = validateToken(token[1]);
   console.log(req.user.id);
   if (!req.user) return res.sendStatus(401);

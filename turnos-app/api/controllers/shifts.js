@@ -2,7 +2,6 @@
 const Branch = require("../models/Branch");
 const User = require("../models/User")
 const Shift = require("../models/Shift")
-//create update hour of shifts
 
 
 const shiftManagement = {
@@ -15,7 +14,6 @@ const shiftManagement = {
 const dateTime = new Date(req.body.dateBooking);
       
 const daysOfWeek = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-//const monthsOfYear = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 const monthsOfYear = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
 const dayOfWeek = daysOfWeek[dateTime.getUTCDay()];
 const dayOfMonth = dateTime.getUTCDate();
@@ -82,7 +80,6 @@ console.log(formDate)
 
       console.log(user)
 
-      //console.log(branch);
       if (!branch) {
         return res.status(404).json({ message: 'Branch not found' });
       }
@@ -120,7 +117,6 @@ console.log(formDate)
       const dateTime = new Date(req.body.dateBooking);
       
 const daysOfWeek = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-//const monthsOfYear = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 const monthsOfYear = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
 const dayOfWeek = daysOfWeek[dateTime.getUTCDay()];
 const dayOfMonth = dateTime.getUTCDate();

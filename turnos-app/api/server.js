@@ -48,13 +48,30 @@ app.listen(process.env.PORT, () => {
   console.log("Server connected on PORT 3001");
 });
 
-/*
-mongoose.connect('mongodb+srv://mywebshift:capsula1@cluster0.9m8xfpq.mongodb.net/?retryWrites=true&w=majority')
-.then(() => {
-    app.listen(PORT,() => {console.log('Server connected on PORT 3001')})
-    console.log('DB connected')
-})
-.catch((error) => {
-    console.log(error)
-})
-*/
+//Swagger-DOC initial config
+
+const swaggerUI = require("swagger-ui-express");
+const swaggerJsDoc = require("swagger-jsdoc");
+const path = require("path");
+const swaggerSpec = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "Turnos App",
+      version: "1.0.0",
+    },
+    servers: [
+      {
+        url: "http://localhost:3001",
+      },
+    ],
+  },
+  apis: ["./routes/*.js"],
+};
+
+app.use(
+  "/api-doc",
+  swaggerUI.serve,
+  swaggerUI.setup(swaggerJsDoc(swaggerSpec))
+);
+
