@@ -1,8 +1,8 @@
 //TURNOS WEB
 const Branch = require("../models/Branch");
-const User = require("../models/User");
-const Shift = require("../models/Shift");
-//create update hour of shifts
+const User = require("../models/User")
+const Shift = require("../models/Shift")
+
 
 const shiftManagement = {
   //CREA LOS TURNOS. HAY QUE PASAR "idUser, phone, hour, date, dateBooking, dateShift" POR EL BODY, Y POR PARAMETRO EL ID DE LA BRANCH.
@@ -10,40 +10,18 @@ const shiftManagement = {
     try {
       //Formatea la fecha del dia reservado.
 
-      const dateTime = new Date(req.body.dateBooking);
-
-      const daysOfWeek = [
-        "Domingo",
-        "Lunes",
-        "Martes",
-        "Miércoles",
-        "Jueves",
-        "Viernes",
-        "Sábado",
-      ];
-      //const monthsOfYear = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-      const monthsOfYear = [
-        "01",
-        "02",
-        "03",
-        "04",
-        "05",
-        "06",
-        "07",
-        "08",
-        "09",
-        "10",
-        "11",
-        "12",
-      ];
-      const dayOfWeek = daysOfWeek[dateTime.getUTCDay()];
-      const dayOfMonth = dateTime.getUTCDate();
-      const monthOfYear = monthsOfYear[dateTime.getUTCMonth()];
-      const year = dateTime.getUTCFullYear();
-      const hour = req.body.hour;
-
-      const formattedDate = `${dayOfMonth}/${monthOfYear}/${year} - ${hour}`;
-      console.log(formattedDate);
+const dateTime = new Date(req.body.dateBooking);
+      
+const daysOfWeek = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+const monthsOfYear = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+const dayOfWeek = daysOfWeek[dateTime.getUTCDay()];
+const dayOfMonth = dateTime.getUTCDate();
+const monthOfYear = monthsOfYear[dateTime.getUTCMonth()];
+const year = dateTime.getUTCFullYear();
+const hour = req.body.hour;
+      
+const formattedDate = `${dayOfMonth}/${monthOfYear}/${year} - ${hour}`;
+console.log(formattedDate)
 
       //Formateo de fecha para el dia que se reserva.
 
@@ -103,7 +81,6 @@ const shiftManagement = {
 
       console.log(user);
 
-      //console.log(branch);
       if (!branch) {
         return res.status(404).json({ message: "Branch not found" });
       }
@@ -143,39 +120,17 @@ const shiftManagement = {
   updateShift: async function (req, res) {
     try {
       const dateTime = new Date(req.body.dateBooking);
-
-      const daysOfWeek = [
-        "Domingo",
-        "Lunes",
-        "Martes",
-        "Miércoles",
-        "Jueves",
-        "Viernes",
-        "Sábado",
-      ];
-      //const monthsOfYear = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-      const monthsOfYear = [
-        "01",
-        "02",
-        "03",
-        "04",
-        "05",
-        "06",
-        "07",
-        "08",
-        "09",
-        "10",
-        "11",
-        "12",
-      ];
-      const dayOfWeek = daysOfWeek[dateTime.getUTCDay()];
-      const dayOfMonth = dateTime.getUTCDate();
-      const monthOfYear = monthsOfYear[dateTime.getUTCMonth()];
-      const year = dateTime.getUTCFullYear();
-      const hour = req.body.hour;
-
-      const formattedDate = `${dayOfMonth}/${monthOfYear}/${year} - ${hour}`;
-      console.log(formattedDate);
+      
+const daysOfWeek = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+const monthsOfYear = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+const dayOfWeek = daysOfWeek[dateTime.getUTCDay()];
+const dayOfMonth = dateTime.getUTCDate();
+const monthOfYear = monthsOfYear[dateTime.getUTCMonth()];
+const year = dateTime.getUTCFullYear();
+const hour = req.body.hour;
+      
+const formattedDate = `${dayOfMonth}/${monthOfYear}/${year} - ${hour}`;
+console.log(formattedDate)
 
       const catchUser = await User.find({ _id: req.body.idUser });
       const user = catchUser[0];
