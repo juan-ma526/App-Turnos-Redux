@@ -6,7 +6,6 @@ const { generateToken } = require("../config/token");
 const bcrypt = require("bcrypt");
 
 const usersManagement = {
-  
   //Función para registrar un usuario.
 
   registerUser: async function (req, res) {
@@ -104,6 +103,7 @@ const usersManagement = {
         role: user.role,
         idBranch: user.idBranch,
         dni: user.dni,
+        nameBranch: user.nameBranch,
       };
 
       const token = generateToken(payload);
@@ -229,7 +229,6 @@ const usersManagement = {
 
   createOperator: async function (req, res) {
     try {
-
       const newOp = new User({
         fullName: req.body.fullName,
         password: req.body.password,

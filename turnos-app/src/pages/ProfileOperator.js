@@ -1,24 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import NavBar from "../components/NavBar";
-import { getOperator, updateUser } from "../store";
+import { updateUser } from "../store";
 
 const ProfileOperator = () => {
   const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.auth);
-  const { data } = useSelector((state) => state.users);
-  const operador = data.filter((usuario) => usuario.id === user.id);
+  const { id, fullName, email, dni, nameBranch } = useSelector(
+    (state) => state.auth.user
+  );
 
-  const [id, setId] = useState(operador[0].id);
-  const [fullName, setFullName] = useState(operador[0].fullName);
-  const [email, setEmail] = useState(operador[0].email);
-  const [dni, setDni] = useState(operador[0].dni);
   const [password, setPassword] = useState("");
-
-  useEffect(() => {
-    dispatch(getOperator());
-  }, []);
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
@@ -92,7 +84,7 @@ const ProfileOperator = () => {
                 </div>
                 <select className="operador-input-desktop13" disabled>
                   <option className="operador-text10 Regular·14·20">
-                    {operador[0].nameBranch}
+                    {nameBranch}
                   </option>
                 </select>
               </div>
