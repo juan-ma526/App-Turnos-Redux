@@ -52,7 +52,7 @@ const usersManagement = {
 
   //Función de logeo de usuarios
 
-  loginUser: async function (req, res) {
+  /*  loginUser: async function (req, res) {
     try {
       const { email, password } = req.body;
 
@@ -79,6 +79,39 @@ const usersManagement = {
       });
     } catch (error) {
       res.send(error);
+    }
+  }, */
+  loginUser: async function (req, res) {
+    try {
+      const { email, password } = req.body;
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        return res.status(401).json({ msg: "User not found" });
+      }
+
+      const isMatch = await bcrypt.compare(password, user.password);
+
+      if (!isMatch) {
+        return res.status(401).json({ msg: "Invalid credential" });
+      }
+
+      const payload = {
+        email: user.email,
+        id: user._id,
+        fullName: user.fullName,
+        phone: user.phone,
+        role: user.role,
+        idBranch: user.idBranch,
+        dni: user.dni,
+      };
+
+      const token = generateToken(payload);
+      res.cookie("token", token);
+      return res.json({ token, user: payload });
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ msg: "Internal Server Error" });
     }
   },
 
@@ -198,8 +231,8 @@ const usersManagement = {
     try {
 
       const newOp = new User({
-        fullName: req.body.fullname,
-        password: newHash,
+        fullName: req.body.fullName,
+        password: req.body.password,
         dni: req.body.dni,
         role: "operator",
         idBranch: req.body.idBranch,
@@ -207,7 +240,6 @@ const usersManagement = {
         email: req.body.email,
       });
       await newOp.save();
-      console.log(newOp);
 
       await Branch.updateOne(
         { _id: req.body.idBranch },

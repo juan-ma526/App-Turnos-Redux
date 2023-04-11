@@ -47,7 +47,15 @@ const CreateOperator = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password === repetedPassword) {
+    if (
+      password === repetedPassword &&
+      id &&
+      fullName &&
+      email &&
+      idBranch &&
+      nameBranch &&
+      dni
+    ) {
       dispatch(
         createOperator({
           id,
@@ -63,6 +71,13 @@ const CreateOperator = () => {
         title: "Exito",
         text: "Operador Creado con Exito",
         icon: "success",
+        allowOutsideClick: false,
+      });
+    } else {
+      Swal.fire({
+        title: "Error",
+        text: "Complete los datos con las caracteristicas requeridas",
+        icon: "error",
         allowOutsideClick: false,
       });
     }

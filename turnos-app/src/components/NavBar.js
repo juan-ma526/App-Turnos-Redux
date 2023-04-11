@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../store/slices/authSlice";
+import { resetStore } from "../store/slices/shiftSlice";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -22,15 +23,16 @@ const NavBar = () => {
     navigate("/register");
   };
 
+  const handleResetStore = (e) => {
+    dispatch(resetStore());
+    navigate("/panelShift");
+  };
+
   const renderedUser = (
     <div className="header-header">
-      <div className="header-c-t-a-desktop2">
-        <span className="header-text">
-          <Link className="link" to="/panelShift">
-            <span>Reservar</span>
-          </Link>
-        </span>
-      </div>
+      <button onClick={handleResetStore} className="header-c-t-a-desktop2">
+        <span className="header-text">Reservar</span>
+      </button>
       <div className="header-men">
         <div className="header-c-t-a-desktop3">
           <span className="header-text2">
@@ -192,7 +194,9 @@ const NavBar = () => {
         </div>
         <div className="header-c-t-a-desktop32">
           <span className="header-text08">
-            <span>Reportes</span>
+            <Link className="link" to="/reports">
+              <span>Reportes</span>
+            </Link>
           </span>
           <svg
             className="header-files"

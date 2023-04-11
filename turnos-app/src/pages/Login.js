@@ -4,20 +4,30 @@ import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../store";
 import Swal from "sweetalert2";
 
+const redirectUserBasedOnRole = (user, navigate) => {
+  const role = user?.role;
+
+  if (role === "administrator") {
+    navigate("/branchList");
+  } else if (role === "operator") {
+    navigate("/shiftOperatorView");
+  } else {
+    navigate("/panelShift");
+  }
+};
+
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { user } = useSelector((state) => {
-    return state.auth;
+  const user = useSelector((state) => {
+    return state.auth.user;
   });
 
   useEffect(() => {
-    const role = user?.role;
-
-    if (role) {
+    if (user) {
       Swal.fire({
         title: "Exito",
         text: "Iniciaste Sesion",
@@ -25,13 +35,7 @@ const Login = () => {
         allowOutsideClick: false,
         timer: 1000,
       });
-      if (role === "administrator") {
-        navigate("/branchList");
-      } else if (role === "operator") {
-        navigate("/shiftOperatorView");
-      } else {
-        navigate("/panelShift");
-      }
+      redirectUserBasedOnRole(user, navigate);
     }
   }, [user]);
 
@@ -45,16 +49,17 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(loginUser({ email, password }));
-    if (user === undefined || user === null) {
-      Swal.fire({
-        title: "Error",
-        text: "Error de email o contraseña",
-        icon: "error",
-        allowOutsideClick: false,
-        timer: 1000,
-      });
-    }
+    dispatch(loginUser({ email, password })).then((result) => {
+      if (result.error) {
+        Swal.fire({
+          title: "Error",
+          text: "Error de email o contraseña",
+          icon: "error",
+          allowOutsideClick: false,
+          timer: 1000,
+        });
+      }
+    });
   };
 
   return (

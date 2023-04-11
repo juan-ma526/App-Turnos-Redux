@@ -1,7 +1,47 @@
+import { Link, useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { cancelShift, getAllShiftByUser } from "../store";
+import { useEffect, useState } from "react";
+import NavBar from "../components/NavBar";
+import Swal from "sweetalert2";
+
 const CancelledShift = () => {
+  const dispatch = useDispatch();
+  const location = useLocation();
+  const { id } = location.state;
+  const [dayBooking, setDayBooking] = useState("");
+  const [hourBooking, setHourBooking] = useState("");
+
+  const { allDataShift } = useSelector((state) => {
+    return state.shift;
+  });
+
+  useEffect(() => {
+    dispatch(getAllShiftByUser());
+  }, [dispatch]);
+
+  const shiftsUser = allDataShift.filter((shift) => shift._id === id);
+  //console.log(shiftsUser[0].infoUser.name);
+  const splitBooking = shiftsUser[0].dateBooking.split("-");
+
+  useEffect(() => {
+    setDayBooking(splitBooking[0]);
+    setHourBooking(splitBooking[1]);
+  }, []);
+
+  const handleClickCancell = (e) => {
+    dispatch(cancelShift({ idShift: id }));
+    Swal.fire({
+      title: "Exito",
+      text: "Turno Cancelado",
+      icon: "success",
+      allowOutsideClick: false,
+    });
+  };
   return (
     <div>
       <div className="cancelado-cancelado">
+        <NavBar />
         <div className="cancelado-c-t-a-desktop3">
           <svg
             className="cancelado-user-interface"
@@ -17,14 +57,16 @@ const CancelledShift = () => {
             />
           </svg>
 
-          <span className="cancelado-text Semibold·14·16">
-            <span>Atrás</span>
-          </span>
+          <Link className="link" to="/shiftUser">
+            <span className="cancelado-text Semibold·14·16">
+              <span>Atrás</span>
+            </span>
+          </Link>
         </div>
         <div className="cancelado-cancelar">
           <div className="cancelado-txt">
             <span className="cancelado-text02">
-              <span>Hola Ivan,</span>
+              <span>Hola {shiftsUser[0].infoUser.name}</span>
             </span>
             <span className="cancelado-text04">
               <span>¿Por qué desea cancelar su reserva?</span>
@@ -72,11 +114,14 @@ const CancelledShift = () => {
             <span className="cancelado-text12">
               <span>La cancelación no puede ser revertida</span>
             </span>
-            <div className="cancelado-c-t-a-desktop4">
+            <button
+              onClick={handleClickCancell}
+              className="cancelado-c-t-a-desktop4"
+            >
               <span className="cancelado-text14">
                 <span>Confirmar cancelación</span>
               </span>
-            </div>
+            </button>
           </div>
           <svg
             className="cancelado-border2"
@@ -141,7 +186,7 @@ const CancelledShift = () => {
               <span>Información de la reserva</span>
             </span>
             <span className="cancelado-text26">
-              <span>Ivan Cruce</span>
+              <span>{shiftsUser[0].infoUser.name}</span>
             </span>
           </div>
           <div className="cancelado-content">
@@ -150,7 +195,7 @@ const CancelledShift = () => {
                 <span>Día</span>
               </span>
               <span className="cancelado-text30">
-                <span>12/10/2022</span>
+                <span>{dayBooking}</span>
               </span>
             </div>
             <div className="cancelado-txt2">
@@ -158,7 +203,7 @@ const CancelledShift = () => {
                 <span>Horario:</span>
               </span>
               <span className="cancelado-text34">
-                <span>13:00 hs</span>
+                <span>{hourBooking}</span>
               </span>
             </div>
             <div className="cancelado-txt3">
