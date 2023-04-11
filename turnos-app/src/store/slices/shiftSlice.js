@@ -11,13 +11,13 @@ const shiftSlice = createSlice({
     error: false,
     dataShift: [],
     allDataShift: [],
-    created: false,
+    createdShift: false,
     msg: "",
   },
   reducers: {
     resetStore: (state, action) => {
       state.isLoading = false;
-      state.created = false;
+      state.createdShift = false;
       state.dataShift = [];
       state.error = false;
     },
@@ -26,18 +26,19 @@ const shiftSlice = createSlice({
     builder.addCase(createShift.pending, (state, action) => {
       state.isLoading = true;
       state.dataShift = [];
-      state.created = false;
+      state.createdShift = false;
       state.error = false;
     });
     builder.addCase(createShift.fulfilled, (state, action) => {
       state.isLoading = false;
       state.dataShift = action.payload;
-      state.created = true;
+      state.createdShift = true;
       state.error = false;
     });
     builder.addCase(createShift.rejected, (state, action) => {
       state.isLoading = false;
-      state.created = false;
+
+      state.createdShift = false;
       state.error = true;
     });
     builder.addCase(getAllShiftByUser.pending, (state, action) => {
@@ -46,11 +47,11 @@ const shiftSlice = createSlice({
     builder.addCase(getAllShiftByUser.fulfilled, (state, action) => {
       state.allDataShift = action.payload;
       state.isLoading = false;
-      state.created = true;
+      state.createdShift = true;
     });
     builder.addCase(getAllShiftByUser.rejected, (state, action) => {
       state.isLoading = false;
-      state.created = false;
+      state.createdShift = false;
       state.error = true;
     });
     builder.addCase(cancelShift.pending, (state, action) => {
@@ -59,12 +60,12 @@ const shiftSlice = createSlice({
     builder.addCase(cancelShift.fulfilled, (state, action) => {
       state.isLoading = false;
       state.msg = action.payload;
-      state.created = true;
+      state.createdShift = true;
       state.error = false;
     });
     builder.addCase(cancelShift.rejected, (state, action) => {
       state.isLoading = false;
-      state.created = false;
+      state.createdShift = false;
       state.error = true;
     });
     builder.addCase(assistShift.pending, (state, action) => {
@@ -73,12 +74,12 @@ const shiftSlice = createSlice({
     builder.addCase(assistShift.fulfilled, (state, action) => {
       state.isLoading = false;
       state.msg = action.payload;
-      state.created = true;
+      state.createdShift = true;
       state.error = false;
     });
     builder.addCase(assistShift.rejected, (state, action) => {
       state.isLoading = false;
-      state.created = false;
+      state.createdShift = false;
       state.error = true;
     });
   },

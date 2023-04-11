@@ -14,7 +14,7 @@ const PanelShift = () => {
   const { user } = useSelector((state) => {
     return state.auth;
   });
-  const { created, error } = useSelector((state) => {
+  const { createdShift, error } = useSelector((state) => {
     return state.shift;
   });
   const [activeStep, setActiveStep] = useState(0);
@@ -48,10 +48,10 @@ const PanelShift = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    if (created) {
+    if (createdShift) {
       navigate("/finalPanelShift");
     }
-  }, [created]);
+  }, [createdShift, navigate]);
 
   useEffect(() => {
     if (error) {
